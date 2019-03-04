@@ -7,10 +7,11 @@ public class OnClick : MonoBehaviour, IPointerClickHandler
 {
     public int pageID;
     public SlideShow slideShow;
-
+    public BackToHome backToHome;
 
     public void OnPointerClick(PointerEventData eventData)
     {
         slideShow.JumpToPage(pageID);
+        backToHome.timeSinceLastInput = 0;
     }
 }
