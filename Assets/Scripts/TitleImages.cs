@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class OnClick : MonoBehaviour, IPointerClickHandler
+public class TitleImages : MonoBehaviour, IPointerClickHandler
 {
     public int pageID;
     public SlideShow slideShow;

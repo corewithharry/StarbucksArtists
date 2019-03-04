@@ -12,7 +12,7 @@ public class SlideShow : MonoBehaviour
 
     public bool autoScrollMode;
     public float transitionTime = 3f;
-    public float time;
+    private float time;
     private bool pageTurned;
     public int currentPage = 1;
     public KeyCode debugKey = KeyCode.Space;
@@ -40,7 +40,7 @@ public class SlideShow : MonoBehaviour
         {
             if (((time >= transitionTime) && (!pageTurned)) || (Input.GetKeyDown(debugKey)))
             {
-                TurnPage();
+                TurnPage(true);
             }
         }
     }
@@ -51,17 +51,31 @@ public class SlideShow : MonoBehaviour
         rectTransform.position = pagePos[currentPage];
     }
 
-    void TurnPage()
+    public void TurnPage(bool isAscending)
     {
         pageTurned = true;
 
-        if (currentPage < numArtists)
+        if (isAscending)
         {
-            currentPage++;
+            if (currentPage < numArtists)
+            {
+                currentPage++;
+            }
+            else
+            {
+                currentPage = 1;
+            }
         }
-        else
+        else if(!isAscending)
         {
-            currentPage = 1;
+            if (currentPage > 1)
+            {
+                currentPage--;
+            }
+            else
+            {
+                currentPage = numArtists;
+            }
         }
         rectTransform.position = pagePos[currentPage];
 
