@@ -13,7 +13,7 @@ public class SlideShow : MonoBehaviour
     public int currentPage = 1;
 
     private SwipeGesture swipeGesture;
-    private Tween moveAnimation;
+    public Tween moveAnimation;
 
     public TimeManager timeManager;
     public bool autoScrollMode;
@@ -135,8 +135,10 @@ public class SlideShow : MonoBehaviour
 
     public void TurnPage()
     {
-        pageTurned = true;
+        //if (moveAnimation.IsPlaying())
+            //return;
 
+        pageTurned = true;
         if (isAscending)
         {
             if (currentPage < numArtists)
