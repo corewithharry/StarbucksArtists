@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+
 
 // Get the latest webcam shot from outside "Friday's" in Times Square
 public class LoadImage : MonoBehaviour
 {
-    public string url = "http://images.earthcam.com/ec_metros/ourcams/fridays.jpg";
+    public string url;
+    private Rect sourceImageSize = new Rect(0, 0, 800, 600);
+    public Image[] image;
+
 
     IEnumerator Start()
     {
@@ -15,8 +20,11 @@ public class LoadImage : MonoBehaviour
             yield return www;
 
             // assign texture
-            Renderer renderer = GetComponent<Renderer>();
-            renderer.material.mainTexture = www.texture;
+            for (int i = 0; i < image.Length; i++)
+            {
+                image[i].sprite = Sprite.Create(www.texture, sourceImageSize, Vector2.zero);
+            }
+
         }
     }
 }
