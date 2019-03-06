@@ -38,6 +38,7 @@ public class SlideShow : MonoBehaviour
         swipeGesture
             .OnSwipeLeft
             .Where(_ => currentPage < numArtists) // 最大ページ以前である場合のみ進める.
+            .Where(_ => currentPage != 0) // 選択画面ではスワイプさせない.
             .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying()) // アニメーション実行中ではない.
             .Subscribe(_ =>
             {
@@ -53,7 +54,8 @@ public class SlideShow : MonoBehaviour
         swipeGesture
             .OnSwipeRight
             .Where(_ => currentPage > 1) // 1ページ目以降である場合のみ戻れる.
-            .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying()) // アニメーション実行中ではない.
+            .Where(_ => currentPage != 0)
+            .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying())
             .Subscribe(_ =>
             {
                 autoScrollMode = false;
@@ -68,7 +70,8 @@ public class SlideShow : MonoBehaviour
         swipeGesture
             .OnSwipeLeft
             .Where(_ => currentPage >= numArtists) // これ以上は進めない.
-            .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying()) // アニメーション実行中ではない.
+            .Where(_ => currentPage != 0)
+            .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying())
             .Subscribe(_ =>
             {
                 autoScrollMode = false;
@@ -82,7 +85,8 @@ public class SlideShow : MonoBehaviour
         swipeGesture
             .OnSwipeRight
             .Where(_ => currentPage <= 1) // これ以上は戻れない.
-            .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying()) // アニメーション実行中ではない.
+            .Where(_ => currentPage != 0)
+            .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying())
             .Subscribe(_ =>
             {
                 autoScrollMode = false;
