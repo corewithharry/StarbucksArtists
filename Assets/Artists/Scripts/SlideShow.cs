@@ -20,7 +20,8 @@ public class SlideShow : MonoBehaviour
     public float transitionTime = 3f;
     private float time;
     private bool pageTurned;
-    bool isAscending;
+    private bool isAscending;
+    public bool isBusy;
 
 
     void Awake()
@@ -111,9 +112,11 @@ public class SlideShow : MonoBehaviour
         {
             if ((time >= transitionTime) && (!pageTurned))
             {
-                TurnPage();
+                AutoScroll();
             }
         }
+
+        isBusy = moveAnimation.IsPlaying();
     }
 
     public void JumpToSpecificArtist(int pageID)
@@ -133,11 +136,8 @@ public class SlideShow : MonoBehaviour
         currentPage = pageID;
     }
 
-    public void TurnPage()
+    public void AutoScroll()
     {
-        //if (moveAnimation.IsPlaying())
-            //return;
-
         pageTurned = true;
         if (isAscending)
         {
