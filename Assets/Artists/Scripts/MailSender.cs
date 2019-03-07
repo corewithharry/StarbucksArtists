@@ -6,6 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text.RegularExpressions;
 using System.Text;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class MailSender : MonoBehaviour
@@ -95,6 +96,7 @@ public class MailSender : MonoBehaviour
         //Debug.Log(customerName.text);
         //Debug.Log(customerAddress.text);
         //Debug.Log(mail.Body);
+        SceneManager.LoadScene("Thanks");
     }
 }
 
