@@ -9,6 +9,7 @@ public class LoadImage : MonoBehaviour
     public string url;
     private Rect sourceImageSize = new Rect(0, 0, 800, 600);
     public Image[] image;
+    public bool isComplete;
 
 
     IEnumerator Start()
@@ -24,7 +25,7 @@ public class LoadImage : MonoBehaviour
             {
                 image[i].sprite = Sprite.Create(www.texture, sourceImageSize, Vector2.zero);
             }
-
+            isComplete = true;
         }
     }
 }

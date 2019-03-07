@@ -15,6 +15,7 @@ public class MailSender : MonoBehaviour
 
     public Text customerName;
     public Text customerAddress;
+    public Text artwork;
     public string template;
     public Text message;
     private StringBuilder mailContent = new StringBuilder();
@@ -35,12 +36,14 @@ public class MailSender : MonoBehaviour
             }
             else
             {
+                inputError.gameObject.SetActive(false);
                 addressError.gameObject.SetActive(true);
                 return;
             }
         }
         else
         {
+            addressError.gameObject.SetActive(false);
             inputError.gameObject.SetActive(true);
             return;
         }
@@ -54,6 +57,7 @@ public class MailSender : MonoBehaviour
         }
         else
         {
+            addressError.gameObject.SetActive(false);
             inputError.gameObject.SetActive(true);
             return;
         }
@@ -70,24 +74,27 @@ public class MailSender : MonoBehaviour
         mail.Subject = "作品購入希望";
 
         mailContent.Clear();
-        mailContent.Append(template);
-        mailContent.Append("\n");
-        mailContent.Append(message.text);
+        mailContent.Append(template + "\n"); // 購入の連絡がありました.
+        mailContent.Append(customerName.text + "　様" + "\n");
+        mailContent.Append("メールアドレス：　" + customerAddress.text + "\n");
+        mailContent.Append(artwork.text + "\n");
+        mailContent.Append("============" + "\n");
+        mailContent.Append(message.text); // 本文.
 
         mail.Body = mailContent.ToString();
 
-        //SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
-        //smtpServer.Port = 587;
-        //smtpServer.Credentials = new System.Net.NetworkCredential(senderAddress, "0Miyage3Tako3") as ICredentialsByHost;
-        //smtpServer.EnableSsl = true;
-        //ServicePointManager.ServerCertificateValidationCallback =
-        //    delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
-        //    { return true; };
-        //smtpServer.Send(mail);
+        SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
+        smtpServer.Port = 587;
+        smtpServer.Credentials = new System.Net.NetworkCredential(senderAddress, "YourPassword") as ICredentialsByHost;
+        smtpServer.EnableSsl = true;
+        ServicePointManager.ServerCertificateValidationCallback =
+            delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
+            { return true; };
+        smtpServer.Send(mail);
 
-        Debug.Log(customerName.text);
-        Debug.Log(customerAddress.text);
-        Debug.Log(mail.Body);
+        //Debug.Log(customerName.text);
+        //Debug.Log(customerAddress.text);
+        //Debug.Log(mail.Body);
     }
 }
 
@@ -111,8 +118,8 @@ public static class RegexUtils
     }
 }
 
-public class ArtworkID
+public class Artwork
 {
-    public readonly static ArtworkID Instance = new ArtworkID();
-    public int id;
+    public readonly static Artwork Instance = new Artwork();
+    public string name;
 }
