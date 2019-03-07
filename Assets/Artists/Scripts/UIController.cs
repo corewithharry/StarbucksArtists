@@ -55,9 +55,7 @@ public class UIController : MonoBehaviour
     public void OnClick()
     {
         if (slideShow.isBusy)
-        {
             return;
-        }
 
         slideShow.JumpToSpecificArtist(0);
         slideShow.autoScrollMode = false;
