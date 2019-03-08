@@ -392,7 +392,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "Loading...\t"
 --- !u!222 &1107023428
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -537,10 +537,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1332331244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5150bb98881d2744a880fe0a9b3fcf3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 1
+  artistName: {fileID: 0}
   loadingText: {fileID: 1107023427}
 --- !u!4 &1332331246
 Transform:

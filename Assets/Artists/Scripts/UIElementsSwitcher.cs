@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIController : MonoBehaviour
+public class UIElementsSwitcher : MonoBehaviour
 {
     public SlideShow slideShow;
     public TimeManager timeManager;
@@ -22,33 +22,29 @@ public class UIController : MonoBehaviour
 
     private void Update()
     {
-        if (slideShow.currentPage == 0)
-        {
-            if (name == "Home Button")
+            if (name == "Home Button") // ホームボタンの挙動.
             {
-                image.enabled = false;
-            }
-            else
-            {
-                if (image != null)
-                    image.enabled = true;
-                else
-                    text.enabled = true;
-            }
-        }
-        else
-        {
-            if (name == "Home Button")
-            {
-                image.enabled = true;
-            }
-            else
-            {
-                if (image != null)
+                if (slideShow.currentPage <= 0)
                     image.enabled = false;
                 else
-                    text.enabled = false;
+                    image.enabled = true;
             }
+            else // ロゴとタイトルの挙動.
+            {
+                if (slideShow.currentPage == 0)
+                {
+                    if (image != null)
+                        image.enabled = true;
+                    else
+                        text.enabled = true;
+                }
+                else
+                {
+                    if (image != null)
+                        image.enabled = false;
+                    else
+                        text.enabled = false;
+                }
         }
     }
 

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 
 // Get the latest webcam shot from outside "Friday's" in Times Square
-public class LoadImage : MonoBehaviour
+public class ImageLoader : MonoBehaviour
 {
     public string url;
     private Rect sourceImageSize = new Rect(0, 0, 800, 600);
