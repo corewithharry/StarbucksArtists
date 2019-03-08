@@ -1,25 +1,30 @@
-﻿using UnityEngine;
-using System.Net;
+﻿using System.Net;
 using System.Net.Mail;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text.RegularExpressions;
 using System.Text;
+
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
 public class MailSender : MonoBehaviour
 {
-    public string senderAddress = "youraddress@gmail.com";
-    public string recipientAddress = "youraddress@gmail.com";
+    public string senderAddress = "youraddress@gmail.com"; // アプリ内で送信用に使用するアドレス（お客様のアドレスではない）.
+    public string recipientAddress = "youraddress@gmail.com"; // お客様からのメールが届くアドレス.
+    public string smtpHost = "smtp.gmail.com";
+    public int smtpPort = 587;
+    [SerializeField] protected string password = "";
 
+    private StringBuilder mailContent = new StringBuilder();
+    private MailMessage mail;
     public Text customerName;
     public Text customerAddress;
     public Text artwork;
     public string template;
     public Text message;
-    private StringBuilder mailContent = new StringBuilder();
 
     public Text inputError; 
     public Text addressError;
@@ -68,14 +73,30 @@ public class MailSender : MonoBehaviour
     {
         inputError.gameObject.SetActive(false);
         addressError.gameObject.SetActive(false);
-        MailMessage mail = new MailMessage();
 
+        mail = new MailMessage();
+        CreateMailContent();
+
+        SmtpClient smtpServer = new SmtpClient(smtpHost);
+        smtpServer.Port = smtpPort;
+        smtpServer.Credentials = new System.Net.NetworkCredential(senderAddress, password) as ICredentialsByHost;
+        smtpServer.EnableSsl = true;
+        ServicePointManager.ServerCertificateValidationCallback =
+            delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
+            { return true; };
+        smtpServer.Send(mail);
+
+        SceneManager.LoadScene("3_Thanks");
+    }
+
+    private void CreateMailContent()
+    {
         mail.From = new MailAddress(senderAddress);
         mail.To.Add(recipientAddress);
         mail.Subject = "作品購入希望";
 
         mailContent.Clear();
-        mailContent.Append(template + "\n"); // 購入の連絡がありました.
+        mailContent.Append(template + "\n"); // 「購入の連絡がありました」.
         mailContent.Append(customerName.text + "　様" + "\n");
         mailContent.Append("メールアドレス：　" + customerAddress.text + "\n");
         mailContent.Append(artwork.text + "\n");
@@ -83,20 +104,6 @@ public class MailSender : MonoBehaviour
         mailContent.Append(message.text); // 本文.
 
         mail.Body = mailContent.ToString();
-
-        SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
-        smtpServer.Port = 587;
-        smtpServer.Credentials = new System.Net.NetworkCredential(senderAddress, "YourPassword") as ICredentialsByHost;
-        smtpServer.EnableSsl = true;
-        ServicePointManager.ServerCertificateValidationCallback =
-            delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
-            { return true; };
-        smtpServer.Send(mail);
-
-        //Debug.Log(customerName.text);
-        //Debug.Log(customerAddress.text);
-        //Debug.Log(mail.Body);
-        SceneManager.LoadScene("Thanks");
     }
 }
 
@@ -119,6 +126,7 @@ public static class RegexUtils
         );
     }
 }
+
 
 public class Artwork
 {

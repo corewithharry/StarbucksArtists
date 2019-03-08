@@ -9,6 +9,9 @@ public class ArtistsIndex : MonoBehaviour
     public TimeManager timeManager;
 
 
+    /// <summary>
+    /// アーティスト一覧画面から，各アーティストのページへ飛ぶ.
+    /// </summary>
     public void OnImageClick()
     {
         slideShow.autoScrollMode = false;

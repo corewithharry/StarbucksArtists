@@ -13,7 +13,7 @@ public class SceneLoader : MonoBehaviour
     private void Start()
     {
         var scene = SceneManager.GetActiveScene();
-        if (scene.name == "Title")
+        if (scene.name == "0_Title")
         {
             StartCoroutine("ShowTitleScene");
             isLoading = true;
@@ -33,15 +33,15 @@ public class SceneLoader : MonoBehaviour
         var scene = SceneManager.GetActiveScene();
         switch (scene.name)
         {
-            case "Main":
+            case "1_Main":
                 Artwork.Instance.name = artistName.text;
-                SceneManager.LoadScene("Purchase");
+                SceneManager.LoadScene("2_Purchase");
                 break;
-            case "Purchase":
-                SceneManager.LoadScene("Main");
+            case "2_Purchase":
+                SceneManager.LoadScene("1_Main");
                 break;
-            case "Thanks":
-                SceneManager.LoadScene("Main");
+            case "3_Thanks":
+                SceneManager.LoadScene("1_Main");
                 break;
         }
     }
@@ -49,6 +49,6 @@ public class SceneLoader : MonoBehaviour
    　private IEnumerator ShowTitleScene()
     {
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("1_Main");
     }
 }

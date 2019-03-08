@@ -1,18 +1,16 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
-
-// Get the latest webcam shot from outside "Friday's" in Times Square
 public class ImageLoader : MonoBehaviour
 {
     public string url;
     private Rect sourceImageSize = new Rect(0, 0, 800, 600);
     public Image[] image;
-    public bool isComplete;
+    public Image loading;
 
 
-    IEnumerator Start()
+    private IEnumerator Start()
     {
         // Start a download of the given URL
         using (WWW www = new WWW(url))
@@ -25,7 +23,9 @@ public class ImageLoader : MonoBehaviour
             {
                 image[i].sprite = Sprite.Create(www.texture, sourceImageSize, Vector2.zero);
             }
-            isComplete = true;
+            // 画像のロードが完了したら，Loadingメッセージを非表示にする.
+            if(loading != null)
+                loading.gameObject.SetActive(false);
         }
     }
 }

@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UniRx;
-using UnityEngine.UI;
 
 public class SlideShow : MonoBehaviour
 {
-    public int numArtists = 2;
-    public int pageWidth = 2048;
+    public int numArtists = 20;
     private RectTransform rectTransform;
+    public int pageWidth = 2048;
     public int currentPage = 1;
 
     private SwipeGesture swipeGesture;
-    public Tween moveAnimation;
+    private Tween moveAnimation;
 
     public TimeManager timeManager;
     public bool autoScrollMode;
-    public float transitionTime = 3f;
-    private float time;
+    private float elapsedTime;
+    public float transitionTime = 10f;
+    public float autoScrollSpeed = 1.0f;
     private bool pageTurned;
     private bool isAscending;
     public bool isBusy;
@@ -27,7 +27,7 @@ public class SlideShow : MonoBehaviour
     void Awake()
     {
         DOTween.Init();
-        DOTween.defaultAutoPlay = AutoPlay.None; // Tween生成時に自動再生させない
+        DOTween.defaultAutoPlay = AutoPlay.None; // Tween生成時に自動再生させない.
     }
 
     void OnEnable()
@@ -106,11 +106,11 @@ public class SlideShow : MonoBehaviour
 
     void Update()
     {
-        time += Time.deltaTime;
+        elapsedTime += Time.deltaTime;
 
         if (autoScrollMode)
         {
-            if ((time >= transitionTime) && (!pageTurned))
+            if ((elapsedTime >= transitionTime) && (!pageTurned))
             {
                 AutoScroll();
             }
@@ -121,7 +121,7 @@ public class SlideShow : MonoBehaviour
 
     public void JumpToSpecificArtist(int pageID)
     {
-        // reset position
+        // 位置をリセット.
         moveAnimation = rectTransform
         .DOAnchorPosX(0f, 0f)
         .Play();
@@ -145,7 +145,7 @@ public class SlideShow : MonoBehaviour
             {
                 currentPage++;
                 moveAnimation = rectTransform
-                .DOAnchorPosX(rectTransform.anchoredPosition.x - pageWidth, 0.5f)
+                .DOAnchorPosX(rectTransform.anchoredPosition.x - pageWidth, autoScrollSpeed)
                 .Play();
             }
             else if (currentPage >= numArtists)
@@ -153,7 +153,7 @@ public class SlideShow : MonoBehaviour
                 currentPage--;
                 isAscending = false;
                 moveAnimation = rectTransform
-                .DOAnchorPosX(rectTransform.anchoredPosition.x + pageWidth, 0.5f)
+                .DOAnchorPosX(rectTransform.anchoredPosition.x + pageWidth, autoScrollSpeed)
                 .Play();
             }
 
@@ -164,7 +164,7 @@ public class SlideShow : MonoBehaviour
             {
                 currentPage--;
                 moveAnimation = rectTransform
-                .DOAnchorPosX(rectTransform.anchoredPosition.x + pageWidth, 0.5f)
+                .DOAnchorPosX(rectTransform.anchoredPosition.x + pageWidth, autoScrollSpeed)
                 .Play();
             }
             else if (currentPage <= 1)
@@ -172,12 +172,12 @@ public class SlideShow : MonoBehaviour
                 currentPage++;
                 isAscending = true;
                 moveAnimation = rectTransform
-                .DOAnchorPosX(rectTransform.anchoredPosition.x - pageWidth, 0.5f)
+                .DOAnchorPosX(rectTransform.anchoredPosition.x - pageWidth, autoScrollSpeed)
                 .Play();
             }
         }
 
-        time = 0;
+        elapsedTime = 0;
         pageTurned = false;
     }
 }

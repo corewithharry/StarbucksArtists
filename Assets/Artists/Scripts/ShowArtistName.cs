@@ -10,6 +10,9 @@ public class ShowArtistName : MonoBehaviour
     public Text artistName;
 
 
+    /// <summary>
+    /// 購入画面で，選択した作品と作家の名前を表示する.
+    /// </summary>
     void Start()
     {
         selectedArtwork.Clear();

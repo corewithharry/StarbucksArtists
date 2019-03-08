@@ -22,14 +22,14 @@ public class UIElementsSwitcher : MonoBehaviour
 
     private void Update()
     {
-            if (name == "Home Button") // ホームボタンの挙動.
+            if (name == "Home Button") // ホームボタンの表示・非表示.
             {
                 if (slideShow.currentPage <= 0)
                     image.enabled = false;
                 else
                     image.enabled = true;
             }
-            else // ロゴとタイトルの挙動.
+            else // ロゴとタイトルの表示・非表示.
             {
                 if (slideShow.currentPage == 0)
                 {
@@ -48,6 +48,9 @@ public class UIElementsSwitcher : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// ホームボタンの挙動.
+    /// </summary>
     public void OnClick()
     {
         if (slideShow.isBusy)
