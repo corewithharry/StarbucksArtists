@@ -1258,6 +1258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 19
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_2.jpg?raw=true
   image:
   - {fileID: 661861835}
@@ -1431,6 +1432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 1148290975}
   artistName: {fileID: 163386841}
   loadingText: {fileID: 0}
 --- !u!114 &106853542
@@ -1573,6 +1575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 13
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_0.jpg?raw=true
   image:
   - {fileID: 1253048791}
@@ -1929,6 +1932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 3
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_2.jpg?raw=true
   image:
   - {fileID: 865212293}
@@ -2065,6 +2069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 250600075}
   artistName: {fileID: 2048186412}
   loadingText: {fileID: 0}
 --- !u!114 &211658016
@@ -2244,6 +2249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 1
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_0.jpg?raw=true
   image:
   - {fileID: 31534092}
@@ -2480,6 +2486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 10
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_1.jpg?raw=true
   image:
   - {fileID: 1802336240}
@@ -2898,6 +2905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 9
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_0.jpg?raw=true
   image:
   - {fileID: 772433518}
@@ -3292,6 +3300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 15
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_2.jpg?raw=true
   image:
   - {fileID: 47189556}
@@ -3386,6 +3395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 1476383800}
   artistName: {fileID: 377994395}
   loadingText: {fileID: 0}
 --- !u!114 &405041936
@@ -4050,6 +4060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 1086758931}
   artistName: {fileID: 1168420888}
   loadingText: {fileID: 0}
 --- !u!114 &424720249
@@ -4417,6 +4428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 2128911688}
   artistName: {fileID: 413873367}
   loadingText: {fileID: 0}
 --- !u!114 &449438349
@@ -4705,6 +4717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 179687524}
   artistName: {fileID: 1236577311}
   loadingText: {fileID: 0}
 --- !u!114 &454116929
@@ -4910,7 +4923,6 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
-  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4982,18 +4994,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &534669906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a811da93682a944729387d95068f6482, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &537504081
 GameObject:
   m_ObjectHideFlags: 0
@@ -6031,6 +6031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 2
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_1.jpg?raw=true
   image:
   - {fileID: 1514644252}
@@ -6413,6 +6414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 1102828611}
   artistName: {fileID: 1302792215}
   loadingText: {fileID: 0}
 --- !u!114 &809539225
@@ -6922,6 +6924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 8
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_3.jpg?raw=true
   image:
   - {fileID: 1953764697}
@@ -7093,6 +7096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 12
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_3.jpg?raw=true
   image:
   - {fileID: 827500370}
@@ -7904,6 +7908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 732084243}
   artistName: {fileID: 63195772}
   loadingText: {fileID: 0}
 --- !u!114 &1067854951
@@ -8204,6 +8209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 18
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_1.jpg?raw=true
   image:
   - {fileID: 29069812}
@@ -8296,6 +8302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 7
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_2.jpg?raw=true
   image:
   - {fileID: 1651539030}
@@ -8546,6 +8553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 16
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_3.jpg?raw=true
   image:
   - {fileID: 384421070}
@@ -8638,6 +8646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 11
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_2.jpg?raw=true
   image:
   - {fileID: 3347324}
@@ -8811,6 +8820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 878460307}
   artistName: {fileID: 1559520702}
   loadingText: {fileID: 0}
 --- !u!114 &1158544630
@@ -10471,6 +10481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 14
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_1.jpg?raw=true
   image:
   - {fileID: 436725261}
@@ -10644,6 +10655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 79501342}
   artistName: {fileID: 1129844096}
   loadingText: {fileID: 0}
 --- !u!114 &1457262249
@@ -10788,6 +10800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 1146758852}
   artistName: {fileID: 792286431}
   loadingText: {fileID: 0}
 --- !u!114 &1461088604
@@ -11011,6 +11024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 387182182}
   artistName: {fileID: 594274386}
   loadingText: {fileID: 0}
 --- !u!114 &1472839887
@@ -11153,6 +11167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 17
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_0.jpg?raw=true
   image:
   - {fileID: 696361563}
@@ -11897,6 +11912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 2037021755}
   artistName: {fileID: 1839832707}
   loadingText: {fileID: 0}
 --- !u!114 &1639881464
@@ -12626,6 +12642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 313186166}
   artistName: {fileID: 79428071}
   loadingText: {fileID: 0}
 --- !u!114 &1718497815
@@ -12991,6 +13008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 6
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_1.jpg?raw=true
   image:
   - {fileID: 1067058254}
@@ -13085,6 +13103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 1808008824}
   artistName: {fileID: 35651868}
   loadingText: {fileID: 0}
 --- !u!114 &1777247942
@@ -13371,6 +13390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 5
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_0.jpg?raw=true
   image:
   - {fileID: 1743468310}
@@ -13702,6 +13722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 119962701}
   artistName: {fileID: 1108903024}
   loadingText: {fileID: 0}
 --- !u!114 &1851601086
@@ -14146,6 +14167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 1422448856}
   artistName: {fileID: 44499020}
   loadingText: {fileID: 0}
 --- !u!114 &1879479723
@@ -14347,7 +14369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeSinceLastInput: 0
-  timeUntilAutoScroll: 10
+  timeUntilAutoScroll: 60
   slideShow: {fileID: 2044401773}
 --- !u!4 &1945966704
 Transform:
@@ -14661,6 +14683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 869040760}
   artistName: {fileID: 359334348}
   loadingText: {fileID: 0}
 --- !u!114 &1974023340
@@ -15029,6 +15052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 1762686268}
   artistName: {fileID: 250414409}
   loadingText: {fileID: 0}
 --- !u!114 &2010933218
@@ -15329,6 +15353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 20
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_3.jpg?raw=true
   image:
   - {fileID: 306878190}
@@ -15644,6 +15669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 222552548}
   artistName: {fileID: 1689533286}
   loadingText: {fileID: 0}
 --- !u!1 &2048186410
@@ -15956,6 +15982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1565f8712825d43259ad6be0dc6a655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pageID: 4
   url: https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_3.jpg?raw=true
   image:
   - {fileID: 451437774}

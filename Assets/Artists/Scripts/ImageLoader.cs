@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class ImageLoader : MonoBehaviour
 {
+    public int pageID;
     public string url;
     private Rect sourceImageSize = new Rect(0, 0, 800, 600);
     public Image[] image;
@@ -22,6 +23,8 @@ public class ImageLoader : MonoBehaviour
             for (int i = 0; i < image.Length; i++)
             {
                 image[i].sprite = Sprite.Create(www.texture, sourceImageSize, Vector2.zero);
+                if (i == 0)
+                    image[i].GetComponent<ArtistsIndex>().pageID = pageID;
             }
             // 画像のロードが完了したら，Loadingメッセージを非表示にする.
             if(loading != null)

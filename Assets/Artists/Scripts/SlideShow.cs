@@ -100,7 +100,7 @@ public class SlideShow : MonoBehaviour
 
     void Start()
     {
-        JumpToSpecificArtist(1);
+        JumpToSpecificArtist(SelectedArtwork.Instance.id);
         autoScrollMode = true;
     }
 

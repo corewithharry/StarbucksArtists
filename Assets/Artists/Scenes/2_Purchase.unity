@@ -737,11 +737,11 @@ RectTransform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1637333540}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -790, y: -610}
+  m_AnchoredPosition: {x: -623, y: -610}
   m_SizeDelta: {x: 526, y: 118}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &463066103
@@ -812,6 +812,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   senderAddress: jpn.ctr.senior2@gmail.com
   recipientAddress: jpn.ctr.senior2@gmail.com
+  smtpHost: smtp.gmail.com
+  smtpPort: 587
+  password: 
   customerName: {fileID: 1102601422}
   customerAddress: {fileID: 207226914}
   artwork: {fileID: 415201654}
@@ -1564,8 +1567,8 @@ RectTransform:
   - {fileID: 1136527188}
   - {fileID: 386088098}
   - {fileID: 1665415791}
-  - {fileID: 463066102}
   - {fileID: 1994157371}
+  - {fileID: 463066102}
   - {fileID: 1880865201}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -2238,11 +2241,11 @@ RectTransform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1637333540}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -560, y: -600}
+  m_AnchoredPosition: {x: -859, y: -600}
   m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1994157372

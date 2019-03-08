@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
+    public ImageLoader imageLoader;
     public Text artistName;
     public Text loadingText;
     private bool isLoading;
@@ -33,14 +34,15 @@ public class SceneLoader : MonoBehaviour
         var scene = SceneManager.GetActiveScene();
         switch (scene.name)
         {
-            case "1_Main":
-                Artwork.Instance.name = artistName.text;
+            case "1_Main": // 閲覧画面から購入画面へ移動.
+                SelectedArtwork.Instance.id = imageLoader.pageID;
+                SelectedArtwork.Instance.name = artistName.text;
                 SceneManager.LoadScene("2_Purchase");
                 break;
-            case "2_Purchase":
+            case "2_Purchase": // 購入画面から閲覧画面へ戻る.
                 SceneManager.LoadScene("1_Main");
                 break;
-            case "3_Thanks":
+            case "3_Thanks": // 送信完了画面から閲覧画面へ戻る.
                 SceneManager.LoadScene("1_Main");
                 break;
         }
@@ -52,3 +54,12 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("1_Main");
     }
 }
+
+
+public class SelectedArtwork
+{
+    public readonly static SelectedArtwork Instance = new SelectedArtwork();
+    public int id = 1;
+    public string name;
+}
+

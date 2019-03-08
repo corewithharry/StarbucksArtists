@@ -126,10 +126,3 @@ public static class RegexUtils
         );
     }
 }
-
-
-public class Artwork
-{
-    public readonly static Artwork Instance = new Artwork();
-    public string name;
-}
