@@ -10,6 +10,9 @@ public class SceneLoader : MonoBehaviour
     public Text artistName;
     public Text loadingText;
     private bool isLoading;
+    private float elapsedTime;
+    private float waitingTime = 10f;
+
 
     private void Start()
     {
@@ -26,6 +29,21 @@ public class SceneLoader : MonoBehaviour
         if(isLoading)
         {
             loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
+        }
+
+        var scene = SceneManager.GetActiveScene();
+        if (scene.name == "3_Thanks")
+            countDownToGoHome();
+    }
+
+    private void countDownToGoHome()
+    {
+        elapsedTime += Time.deltaTime;
+        if (elapsedTime > waitingTime)
+        {
+            SelectedArtwork.Instance.id = 0;
+            SelectedArtwork.Instance.name = "";
+            SceneManager.LoadScene("1_Main");
         }
     }
 
