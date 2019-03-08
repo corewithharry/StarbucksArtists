@@ -8,10 +8,32 @@ public class ImageLoader : MonoBehaviour
     public string url;
     private Rect sourceImageSize = new Rect(0, 0, 800, 600);
     public Image[] image;
-    public Image loading;
+    public Image loadingPanel;
+    private Text loadingText;
+    private bool isComplete;
 
 
-    private IEnumerator Start()
+    private void Start()
+    {
+        StartCoroutine("LoadImages");
+        // このスクリプトは各ページに付いているが，１ページ目の画像のロード状況のみを見て，Loadingメッセージの表示を切り替えている.
+        // 余裕があれば，全ての画像のロードが完了してからメッセージを消すようにした方が良い.
+        if (loadingPanel != null)
+            loadingText = loadingPanel.GetComponentInChildren<Text>();
+    }
+
+    private void Update()
+    {
+        if (!isComplete && loadingText != null)
+        {
+            loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time * 3, 1));
+        }
+    }
+
+    /// <summary>
+    /// 各ページの画像をロードする.
+    /// </summary>
+    private IEnumerator LoadImages()
     {
         // Start a download of the given URL
         using (WWW www = new WWW(url))
@@ -26,9 +48,12 @@ public class ImageLoader : MonoBehaviour
                 if (i == 0)
                     image[i].GetComponent<ArtistsIndex>().pageID = pageID;
             }
-            // 画像のロードが完了したら，Loadingメッセージを非表示にする.
-            if(loading != null)
-                loading.gameObject.SetActive(false);
+            // １ページ目の画像のロードが完了したら，Loadingメッセージを非表示にする.
+            if (loadingPanel != null)
+            {
+                loadingPanel.gameObject.SetActive(false);
+                isComplete = true;
+            }
         }
     }
 }

@@ -43,6 +43,8 @@ public class SceneLoader : MonoBehaviour
                 SceneManager.LoadScene("1_Main");
                 break;
             case "3_Thanks": // 送信完了画面から閲覧画面へ戻る.
+                SelectedArtwork.Instance.id = 0;
+                SelectedArtwork.Instance.name = "";
                 SceneManager.LoadScene("1_Main");
                 break;
         }

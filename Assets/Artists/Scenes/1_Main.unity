@@ -1263,7 +1263,7 @@ MonoBehaviour:
   image:
   - {fileID: 661861835}
   - {fileID: 79501343}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &79501343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1580,7 +1580,7 @@ MonoBehaviour:
   image:
   - {fileID: 1253048791}
   - {fileID: 119962702}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &119962702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1937,7 +1937,7 @@ MonoBehaviour:
   image:
   - {fileID: 865212293}
   - {fileID: 179687522}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!1 &188978729
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,7 +2254,7 @@ MonoBehaviour:
   image:
   - {fileID: 31534092}
   - {fileID: 222552546}
-  loading: {fileID: 920003641}
+  loadingPanel: {fileID: 920003641}
 --- !u!1 &236356644
 GameObject:
   m_ObjectHideFlags: 0
@@ -2491,7 +2491,7 @@ MonoBehaviour:
   image:
   - {fileID: 1802336240}
   - {fileID: 250600076}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &250600076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2910,7 +2910,7 @@ MonoBehaviour:
   image:
   - {fileID: 772433518}
   - {fileID: 313186167}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &313186167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3305,7 +3305,7 @@ MonoBehaviour:
   image:
   - {fileID: 47189556}
   - {fileID: 387182183}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &387182183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6036,7 +6036,7 @@ MonoBehaviour:
   image:
   - {fileID: 1514644252}
   - {fileID: 732084241}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!1 &770091196
 GameObject:
   m_ObjectHideFlags: 0
@@ -6929,7 +6929,7 @@ MonoBehaviour:
   image:
   - {fileID: 1953764697}
   - {fileID: 869040761}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &869040761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7101,7 +7101,7 @@ MonoBehaviour:
   image:
   - {fileID: 827500370}
   - {fileID: 878460308}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &878460308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8214,7 +8214,7 @@ MonoBehaviour:
   image:
   - {fileID: 29069812}
   - {fileID: 1086758932}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &1086758932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8307,7 +8307,7 @@ MonoBehaviour:
   image:
   - {fileID: 1651539030}
   - {fileID: 1102828612}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &1102828612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8558,7 +8558,7 @@ MonoBehaviour:
   image:
   - {fileID: 384421070}
   - {fileID: 1146758853}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &1146758853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8651,7 +8651,7 @@ MonoBehaviour:
   image:
   - {fileID: 3347324}
   - {fileID: 1148290976}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &1148290976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10486,7 +10486,7 @@ MonoBehaviour:
   image:
   - {fileID: 436725261}
   - {fileID: 1422448857}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &1422448857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11172,7 +11172,7 @@ MonoBehaviour:
   image:
   - {fileID: 696361563}
   - {fileID: 1476383801}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &1476383801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13013,7 +13013,7 @@ MonoBehaviour:
   image:
   - {fileID: 1067058254}
   - {fileID: 1762686269}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &1762686269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13395,7 +13395,7 @@ MonoBehaviour:
   image:
   - {fileID: 1743468310}
   - {fileID: 1808008825}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &1808008825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15358,7 +15358,7 @@ MonoBehaviour:
   image:
   - {fileID: 306878190}
   - {fileID: 2037021756}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &2037021756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15987,7 +15987,7 @@ MonoBehaviour:
   image:
   - {fileID: 451437774}
   - {fileID: 2128911689}
-  loading: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!114 &2128911689
 MonoBehaviour:
   m_ObjectHideFlags: 0

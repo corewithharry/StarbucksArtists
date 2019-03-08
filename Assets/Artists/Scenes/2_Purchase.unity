@@ -378,6 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageLoader: {fileID: 0}
   artistName: {fileID: 0}
   loadingText: {fileID: 0}
 --- !u!4 &286088775
@@ -2096,7 +2097,7 @@ GameObject:
   - component: {fileID: 1880865203}
   - component: {fileID: 1880865202}
   m_Layer: 0
-  m_Name: Home Button
+  m_Name: Back Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2116,11 +2117,11 @@ RectTransform:
   m_Father: {fileID: 1637333540}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -150, y: -50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -200}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1880865202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2194,7 +2195,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 82f01b4d11d594c059b2f26441296286, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f35da8270c7de4f4baee99b077b81946, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
