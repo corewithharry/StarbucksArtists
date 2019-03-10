@@ -6,7 +6,7 @@ using UniRx;
 
 public class SlideShow : MonoBehaviour
 {
-    public int numArtists = 20;
+    private int numArtists = 20;
     private RectTransform rectTransform;
     public int pageWidth = 2048;
     public int currentPage = 1;
@@ -28,6 +28,8 @@ public class SlideShow : MonoBehaviour
     {
         DOTween.Init();
         DOTween.defaultAutoPlay = AutoPlay.None; // Tween生成時に自動再生させない.
+
+        numArtists = Artworks.Instance.numArtists;
     }
 
     void OnEnable()
@@ -100,7 +102,7 @@ public class SlideShow : MonoBehaviour
 
     void Start()
     {
-        JumpToSpecificArtist(SelectedArtwork.Instance.id);
+        JumpToSpecificArtist(Artworks.Instance.selectedWorkID);
         autoScrollMode = true;
     }
 

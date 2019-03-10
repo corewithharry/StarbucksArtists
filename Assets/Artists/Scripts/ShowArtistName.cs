@@ -17,7 +17,7 @@ public class ShowArtistName : MonoBehaviour
     {
         selectedArtwork.Clear();
         selectedArtwork.Append("選択した作品 / Selected artwork：　" + "\n");
-        selectedArtwork.Append(SelectedArtwork.Instance.id);
+        selectedArtwork.Append(Artworks.Instance.selectedWorkID);
         artistName.text = selectedArtwork.ToString();
     }
 }

@@ -5,27 +5,41 @@ using UnityEngine.UI;
 
 public class ImageLoader : MonoBehaviour
 {
-    private Rect sourceImageSize = new Rect(0, 0, 800, 600);
+    private Rect sourceImageSize = new Rect(0, 0, 1920, 1200);
+    private int numArtists;
+    private int id;
+    public string[] urls;
+    private int numDone;
+
     public Text loadingText;
     public SceneLoader sceneLoader;
 
 
     private void Start()
     {
-        StartCoroutine("GetTexture");
+        numArtists = Artworks.Instance.numArtists;
+
+        foreach (var item in FetchedImages.Instance.images)
+        {
+            StartCoroutine("GetTexture", id);
+            id++;
+        }
     }
 
     private void Update()
     {
         loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
+
+        if (numDone >= numArtists)
+            sceneLoader.LoadMainScene();
     }
 
     /// <summary>
     /// 各ページの画像をロードする.
     /// </summary>
-    IEnumerator GetTexture()
+    IEnumerator GetTexture(int pageID)
     {
-        UnityWebRequest www = UnityWebRequestTexture.GetTexture("https://github.com/h-nishihata/MediaArtProgram2014/blob/master/ProcessingSample/P2_Images_1/data/photo_0.jpg?raw=true");
+        UnityWebRequest www = UnityWebRequestTexture.GetTexture(urls[id]);
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError)
@@ -34,18 +48,15 @@ public class ImageLoader : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i < 20; i++)
-            {
-                Texture2D myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
-                FetchedImages.Instance.images[i] = Sprite.Create(myTexture, sourceImageSize, Vector2.zero);
-            }
+            Texture2D myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
+            FetchedImages.Instance.images[pageID] = Sprite.Create(myTexture, sourceImageSize, Vector2.zero);
         }
-        sceneLoader.LoadMainScene();
+        numDone++;
     }
 }
 
 public class FetchedImages
 {
     public readonly static FetchedImages Instance = new FetchedImages();
-    public Sprite[] images = new Sprite[20];
+    public Sprite[] images = new Sprite[Artworks.Instance.numArtists];
 }

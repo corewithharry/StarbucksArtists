@@ -620,6 +620,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slideShow: {fileID: 0}
+  messageShowingTime: 10
+  inputWaitingTime: 60
 --- !u!4 &1332331246
 Transform:
   m_ObjectHideFlags: 0
@@ -665,6 +667,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingText: {fileID: 1107023427}
   sceneLoader: {fileID: 1332331245}
+  urls:
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/master/Images/template.jpg?raw=true
 --- !u!4 &1387376655
 Transform:
   m_ObjectHideFlags: 0

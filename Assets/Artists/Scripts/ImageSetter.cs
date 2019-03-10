@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ImageSetter : MonoBehaviour
 {
-    public Sprite[] sprites = new Sprite[20];
+    public Sprite[] sprites = new Sprite[Artworks.Instance.numArtists];
     public Image[] images;
 
 

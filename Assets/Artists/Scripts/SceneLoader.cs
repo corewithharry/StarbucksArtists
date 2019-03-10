@@ -37,7 +37,7 @@ public class SceneLoader : MonoBehaviour
         var timeLimit = scene.name == "2_Purchase" ? inputWaitingTime : messageShowingTime;
         if (elapsedTime > timeLimit)
         {
-            SelectedArtwork.Instance.id = 0;
+            Artworks.Instance.selectedWorkID = 0;
             //SelectedArtwork.Instance.name = "";
             LoadMainScene();
         }
@@ -48,7 +48,7 @@ public class SceneLoader : MonoBehaviour
         switch (scene.name)
         {
             case "1_Main": // 閲覧画面から購入画面へ移動.
-                SelectedArtwork.Instance.id = slideShow.currentPage;
+                Artworks.Instance.selectedWorkID = slideShow.currentPage;
                 //SelectedArtwork.Instance.name = artistName.text;
                 SceneManager.LoadScene("2_Purchase");
                 break;
@@ -56,7 +56,7 @@ public class SceneLoader : MonoBehaviour
                 LoadMainScene();
                 break;
             case "3_Sent": // 送信完了画面から閲覧画面へ戻る.
-                SelectedArtwork.Instance.id = 0;
+                Artworks.Instance.selectedWorkID = 0;
                 //SelectedArtwork.Instance.name = "";
                 LoadMainScene();
                 break;
@@ -75,10 +75,12 @@ public class SceneLoader : MonoBehaviour
 }
 
 
-public class SelectedArtwork
+public class Artworks
 {
-    public readonly static SelectedArtwork Instance = new SelectedArtwork();
-    public int id = 1;
+    public readonly static Artworks Instance = new Artworks();
+
+    public int numArtists = 20;
+    public int selectedWorkID = 1;
     //public string name;
 }
 
