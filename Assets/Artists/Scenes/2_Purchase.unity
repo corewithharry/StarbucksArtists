@@ -777,6 +777,7 @@ MonoBehaviour:
   message: {fileID: 1263522658}
   inputError: {fileID: 1748903121}
   addressError: {fileID: 1525387056}
+  sceneLoader: {fileID: 1386558967}
 --- !u!4 &870629693
 Transform:
   m_ObjectHideFlags: 0

@@ -55,7 +55,7 @@ public class SceneLoader : MonoBehaviour
             case "2_Purchase": // 購入画面から閲覧画面へ戻る.
                 LoadMainScene();
                 break;
-            case "3_Thanks": // 送信完了画面から閲覧画面へ戻る.
+            case "3_Sent": // 送信完了画面から閲覧画面へ戻る.
                 SelectedArtwork.Instance.id = 0;
                 //SelectedArtwork.Instance.name = "";
                 LoadMainScene();
@@ -66,6 +66,11 @@ public class SceneLoader : MonoBehaviour
     public void LoadMainScene()
     {
         SceneManager.LoadScene("1_Main");
+    }
+
+    public void LoadSentScene()
+    {
+        SceneManager.LoadScene("3_Sent");
     }
 }
 

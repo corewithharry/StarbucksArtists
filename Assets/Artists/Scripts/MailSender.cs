@@ -7,7 +7,6 @@ using System.Text;
 
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 
 public class MailSender : MonoBehaviour
@@ -28,6 +27,7 @@ public class MailSender : MonoBehaviour
 
     public Text inputError; 
     public Text addressError;
+    public SceneLoader sceneLoader;
 
 
     public void CheckMailAddress()
@@ -86,7 +86,7 @@ public class MailSender : MonoBehaviour
             { return true; };
         smtpServer.Send(mail);
 
-        SceneManager.LoadScene("3_Thanks");
+        sceneLoader.LoadSentScene();
     }
 
     private void CreateMailContent()
