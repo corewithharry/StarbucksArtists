@@ -29,6 +29,8 @@ public class MailSender : MonoBehaviour
     public Text inputError; 
     public Text addressError;
 
+    public SlideShow slideShow;
+
 
     public void CheckMailAddress()
     {
@@ -86,7 +88,8 @@ public class MailSender : MonoBehaviour
             { return true; };
         smtpServer.Send(mail);
 
-        SceneManager.LoadScene("3_Thanks");
+        //SceneManager.LoadScene("3_Thanks");
+        slideShow.JumpToSpecificArtist(slideShow.numArtists + 3);
     }
 
     private void CreateMailContent()

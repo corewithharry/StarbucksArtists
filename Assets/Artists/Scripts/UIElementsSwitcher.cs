@@ -9,7 +9,6 @@ public class UIElementsSwitcher : MonoBehaviour
     public TimeManager timeManager;
     public Image image;
     public Text text;
-    private string name;
 
 
     public void Start()
@@ -17,12 +16,11 @@ public class UIElementsSwitcher : MonoBehaviour
         image = GetComponent<Image>();
         if(image == null)
             text = GetComponent<Text>();
-        name = gameObject.name;
     }
 
     private void Update()
     {
-            if (name == "Home Button") // ホームボタンの表示・非表示.
+            if (gameObject.name == "Home Button") // ホームボタンの表示・非表示.
             {
                 if (slideShow.currentPage <= 0)
                     image.enabled = false;
