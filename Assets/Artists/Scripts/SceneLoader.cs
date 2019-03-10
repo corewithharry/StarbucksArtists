@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     private Scene scene;
-    private float elapsedTime;
-    private float waitingTime = 10f;
     public SlideShow slideShow;
+    private float elapsedTime;
+    public float messageShowingTime = 10f;
+    public float inputWaitingTime = 60f;
 
 
     private void Start()
@@ -16,21 +17,25 @@ public class SceneLoader : MonoBehaviour
         scene = SceneManager.GetActiveScene();
     }
 
-    public void LoadMainScene()
-    {
-        SceneManager.LoadScene("1_Main");
-    }
-
     private void Update()
     {
-        if (scene.name == "3_Thanks")
-            countDownToGoHome();
+        if (scene.name == "0_Title" || scene.name == "1_Main")
+            return;
+
+        CountDownToGoHome();
+        if (scene.name == "2_Purchase")
+        {
+            if (Input.GetMouseButton(0) || Input.anyKey)
+                elapsedTime = 0;
+        }
     }
 
-    private void countDownToGoHome()
+    private void CountDownToGoHome()
     {
         elapsedTime += Time.deltaTime;
-        if (elapsedTime > waitingTime)
+
+        var timeLimit = scene.name == "2_Purchase" ? inputWaitingTime : messageShowingTime;
+        if (elapsedTime > timeLimit)
         {
             SelectedArtwork.Instance.id = 0;
             //SelectedArtwork.Instance.name = "";
@@ -56,6 +61,11 @@ public class SceneLoader : MonoBehaviour
                 LoadMainScene();
                 break;
         }
+    }
+
+    public void LoadMainScene()
+    {
+        SceneManager.LoadScene("1_Main");
     }
 }
 
