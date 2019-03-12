@@ -21,6 +21,7 @@ public class MailSender : MonoBehaviour
     private MailMessage mail;
     public Text customerName;
     public Text customerAddress;
+    public Dropdown dropdown;
     public Text artwork;
     public string template;
     public Text message;
@@ -32,7 +33,7 @@ public class MailSender : MonoBehaviour
 
     public void CheckMailAddress()
     {
-        if(customerAddress.text.Length != 0)
+        if (customerAddress.text.Length != 0)
         {
             var isMailAddress = RegexUtils.IsMailAddress(customerAddress.text);
             if (isMailAddress)
@@ -69,6 +70,8 @@ public class MailSender : MonoBehaviour
         }
     }
 
+
+
     private void Send()
     {
         inputError.gameObject.SetActive(false);
@@ -76,7 +79,7 @@ public class MailSender : MonoBehaviour
 
         mail = new MailMessage();
         CreateMailContent();
-
+        /*
         SmtpClient smtpServer = new SmtpClient(smtpHost);
         smtpServer.Port = smtpPort;
         smtpServer.Credentials = new System.Net.NetworkCredential(senderAddress, password) as ICredentialsByHost;
@@ -87,6 +90,8 @@ public class MailSender : MonoBehaviour
         smtpServer.Send(mail);
 
         sceneLoader.LoadSentScene();
+        */
+        Debug.Log(mail.Body);       
     }
 
     private void CreateMailContent()
@@ -100,10 +105,20 @@ public class MailSender : MonoBehaviour
         mailContent.Append(customerName.text + "　様" + "\n");
         mailContent.Append("メールアドレス：　" + customerAddress.text + "\n");
         mailContent.Append(artwork.text + "\n");
+        var choice = dropdown.options[dropdown.value].text;
+        mailContent.Append(choice + "\n");
         mailContent.Append("============" + "\n");
         mailContent.Append(message.text); // 本文.
 
         mail.Body = mailContent.ToString();
+    }
+
+    /// <summary>
+    /// デバッグ用.
+    /// </summary>
+    public void Bypass()
+    {
+        sceneLoader.LoadSentScene();
     }
 }
 
