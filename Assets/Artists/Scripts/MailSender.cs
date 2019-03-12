@@ -79,7 +79,7 @@ public class MailSender : MonoBehaviour
 
         mail = new MailMessage();
         CreateMailContent();
-        /*
+
         SmtpClient smtpServer = new SmtpClient(smtpHost);
         smtpServer.Port = smtpPort;
         smtpServer.Credentials = new System.Net.NetworkCredential(senderAddress, password) as ICredentialsByHost;
@@ -90,8 +90,6 @@ public class MailSender : MonoBehaviour
         smtpServer.Send(mail);
 
         sceneLoader.LoadSentScene();
-        */
-        Debug.Log(mail.Body);       
     }
 
     private void CreateMailContent()

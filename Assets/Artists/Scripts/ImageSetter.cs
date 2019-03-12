@@ -14,6 +14,12 @@ public class ImageSetter : MonoBehaviour
         for (int i = 0; i < sprites.Length; i++)
         {
             sprites[i] = FetchedImages.Instance.images[i];
+
+            if (sprites[i] == null) // 画像が取得できなかった場合，ローカルのものと差し替える.
+            {
+                var fileName = i < 10 ? "0" + i.ToString() : i.ToString();
+                sprites[i] = Resources.Load<Sprite>("images/" + fileName);
+            }
         }
         SetImages();
     }
