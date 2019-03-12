@@ -6,7 +6,7 @@ public class TimeManager : MonoBehaviour
 {
     public float timeSinceLastInput;
     public float timeUntilAutoScroll = 10f;
-    public SlideShow slideShow;
+    public PageManager pageManager;
 
 
     void Update()
@@ -16,13 +16,13 @@ public class TimeManager : MonoBehaviour
 
     private void CountDownToScroll()
     {
-        if (slideShow.autoScrollMode)
+        if (pageManager.autoScrollMode)
             return;
 
         timeSinceLastInput += Time.deltaTime;
         if (timeSinceLastInput > timeUntilAutoScroll)
         {
-            slideShow.autoScrollMode = true;
+            pageManager.autoScrollMode = true;
             timeSinceLastInput = 0;
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using UniRx;
 
-public class SlideShow : MonoBehaviour
+public class PageManager : MonoBehaviour
 {
     private int numArtists = 20;
     private RectTransform rectTransform;

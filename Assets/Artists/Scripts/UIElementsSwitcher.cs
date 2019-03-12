@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIElementsSwitcher : MonoBehaviour
 {
-    public SlideShow slideShow;
+    public PageManager pageManager;
     public TimeManager timeManager;
     public Image image;
     public Text text;
@@ -22,14 +22,14 @@ public class UIElementsSwitcher : MonoBehaviour
     {
             if (gameObject.name == "Home Button") // ホームボタンの表示・非表示.
             {
-                if (slideShow.currentPage <= 0)
+                if (pageManager.currentPage <= 0)
                     image.enabled = false;
                 else
                     image.enabled = true;
             }
             else // ロゴとタイトルの表示・非表示.
             {
-                if (slideShow.currentPage == 0)
+                if (pageManager.currentPage == 0)
                 {
                     if (image != null)
                         image.enabled = true;
@@ -51,11 +51,11 @@ public class UIElementsSwitcher : MonoBehaviour
     /// </summary>
     public void OnClick()
     {
-        if (slideShow.isBusy)
+        if (pageManager.isBusy)
             return;
 
-        slideShow.JumpToSpecificArtist(0);
-        slideShow.autoScrollMode = false;
+        pageManager.JumpToSpecificArtist(0);
+        pageManager.autoScrollMode = false;
         timeManager.timeSinceLastInput = 0;
     }
 }

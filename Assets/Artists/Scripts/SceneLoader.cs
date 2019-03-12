@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     private Scene scene;
-    public SlideShow slideShow;
+    public PageManager pageManager;
     private float elapsedTime;
     public float messageShowingTime = 10f;
     public float inputWaitingTime = 60f;
@@ -48,7 +48,7 @@ public class SceneLoader : MonoBehaviour
         switch (scene.name)
         {
             case "1_Main": // 閲覧画面から購入画面へ移動.
-                Artworks.Instance.selectedWorkID = slideShow.currentPage;
+                Artworks.Instance.selectedWorkID = pageManager.currentPage;
                 //SelectedArtwork.Instance.name = artistName.text;
                 SceneManager.LoadScene("2_Purchase");
                 break;

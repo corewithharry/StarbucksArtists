@@ -5,7 +5,7 @@ using UnityEngine;
 public class ArtistsIndex : MonoBehaviour
 {
     public int pageID;
-    public SlideShow slideShow;
+    public PageManager pageManager;
     public TimeManager timeManager;
 
 
@@ -14,8 +14,8 @@ public class ArtistsIndex : MonoBehaviour
     /// </summary>
     public void OnImageClick()
     {
-        slideShow.autoScrollMode = false;
+        pageManager.autoScrollMode = false;
         timeManager.timeSinceLastInput = 0;
-        slideShow.JumpToSpecificArtist(pageID);
+        pageManager.JumpToSpecificArtist(pageID);
     }
 }

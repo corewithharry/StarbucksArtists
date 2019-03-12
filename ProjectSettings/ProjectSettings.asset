@@ -113,7 +113,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.1
+  bundleVersion: 1.0.0
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -176,18 +176,29 @@ PlayerSettings:
   uIStatusBarHidden: 1
   uIExitOnSuspend: 0
   uIStatusBarStyle: 0
-  iPhoneSplashScreen: {fileID: 0}
-  iPhoneHighResSplashScreen: {fileID: 0}
-  iPhoneTallHighResSplashScreen: {fileID: 0}
-  iPhone47inSplashScreen: {fileID: 0}
-  iPhone55inPortraitSplashScreen: {fileID: 0}
-  iPhone55inLandscapeSplashScreen: {fileID: 0}
-  iPhone58inPortraitSplashScreen: {fileID: 0}
-  iPhone58inLandscapeSplashScreen: {fileID: 0}
-  iPadPortraitSplashScreen: {fileID: 0}
-  iPadHighResPortraitSplashScreen: {fileID: 0}
-  iPadLandscapeSplashScreen: {fileID: 0}
-  iPadHighResLandscapeSplashScreen: {fileID: 0}
+  iPhoneSplashScreen: {fileID: 2800000, guid: 7d25d37ddf4c74e29944490f0cfdb310, type: 3}
+  iPhoneHighResSplashScreen: {fileID: 2800000, guid: 7d25d37ddf4c74e29944490f0cfdb310,
+    type: 3}
+  iPhoneTallHighResSplashScreen: {fileID: 2800000, guid: 7d25d37ddf4c74e29944490f0cfdb310,
+    type: 3}
+  iPhone47inSplashScreen: {fileID: 2800000, guid: 7d25d37ddf4c74e29944490f0cfdb310,
+    type: 3}
+  iPhone55inPortraitSplashScreen: {fileID: 2800000, guid: 7d25d37ddf4c74e29944490f0cfdb310,
+    type: 3}
+  iPhone55inLandscapeSplashScreen: {fileID: 2800000, guid: 7d25d37ddf4c74e29944490f0cfdb310,
+    type: 3}
+  iPhone58inPortraitSplashScreen: {fileID: 2800000, guid: 7d25d37ddf4c74e29944490f0cfdb310,
+    type: 3}
+  iPhone58inLandscapeSplashScreen: {fileID: 2800000, guid: 7d25d37ddf4c74e29944490f0cfdb310,
+    type: 3}
+  iPadPortraitSplashScreen: {fileID: 2800000, guid: 7d25d37ddf4c74e29944490f0cfdb310,
+    type: 3}
+  iPadHighResPortraitSplashScreen: {fileID: 2800000, guid: 7d25d37ddf4c74e29944490f0cfdb310,
+    type: 3}
+  iPadLandscapeSplashScreen: {fileID: 2800000, guid: 7d25d37ddf4c74e29944490f0cfdb310,
+    type: 3}
+  iPadHighResLandscapeSplashScreen: {fileID: 2800000, guid: 7d25d37ddf4c74e29944490f0cfdb310,
+    type: 3}
   appleTVSplashScreen: {fileID: 0}
   appleTVSplashScreen2x: {fileID: 0}
   tvOSSmallIconLayers: []
@@ -198,7 +209,7 @@ PlayerSettings:
   tvOSTopShelfImageLayers2x: []
   tvOSTopShelfImageWideLayers: []
   tvOSTopShelfImageWideLayers2x: []
-  iOSLaunchScreenType: 3
+  iOSLaunchScreenType: 0
   iOSLaunchScreenPortrait: {fileID: 0}
   iOSLaunchScreenLandscape: {fileID: 0}
   iOSLaunchScreenBackgroundColor:
@@ -207,7 +218,7 @@ PlayerSettings:
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
   iOSLaunchScreenCustomXibPath: 
-  iOSLaunchScreeniPadType: 3
+  iOSLaunchScreeniPadType: 0
   iOSLaunchScreeniPadImage: {fileID: 0}
   iOSLaunchScreeniPadBackgroundColor:
     serializedVersion: 2
