@@ -943,9 +943,10 @@ GameObject:
   - component: {fileID: 66077523}
   - component: {fileID: 66077525}
   - component: {fileID: 66077524}
+  - component: {fileID: 66077526}
   m_Layer: 0
   m_Name: Header
-  m_TagString: Untagged
+  m_TagString: Header
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1008,6 +1009,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66077522}
   m_CullTransparentMesh: 0
+--- !u!114 &66077526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66077522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dcb90b475687428091ca33575bf292a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pageManager: {fileID: 2044401773}
+  timeManager: {fileID: 1945966703}
+  image: {fileID: 66077524}
 --- !u!1 &66891185
 GameObject:
   m_ObjectHideFlags: 0
@@ -2760,7 +2776,6 @@ GameObject:
   - component: {fileID: 282341296}
   - component: {fileID: 282341298}
   - component: {fileID: 282341297}
-  - component: {fileID: 282341299}
   m_Layer: 0
   m_Name: Sandwich Logo
   m_TagString: Untagged
@@ -2824,22 +2839,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282341295}
   m_CullTransparentMesh: 0
---- !u!114 &282341299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 282341295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dcb90b475687428091ca33575bf292a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pageManager: {fileID: 2044401773}
-  timeManager: {fileID: 1945966703}
-  image: {fileID: 1980803633}
-  text: {fileID: 0}
 --- !u!1 &306878186
 GameObject:
   m_ObjectHideFlags: 0
@@ -7722,7 +7721,6 @@ GameObject:
   - component: {fileID: 935947185}
   - component: {fileID: 935947187}
   - component: {fileID: 935947186}
-  - component: {fileID: 935947188}
   m_Layer: 0
   m_Name: Title
   m_TagString: Untagged
@@ -7791,22 +7789,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935947184}
   m_CullTransparentMesh: 0
---- !u!114 &935947188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935947184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dcb90b475687428091ca33575bf292a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pageManager: {fileID: 2044401773}
-  timeManager: {fileID: 1945966703}
-  image: {fileID: 0}
-  text: {fileID: 935947186}
 --- !u!1 &964944011
 GameObject:
   m_ObjectHideFlags: 0
@@ -16963,7 +16945,7 @@ GameObject:
   - component: {fileID: 1980803635}
   m_Layer: 5
   m_Name: Home Button
-  m_TagString: Untagged
+  m_TagString: Home Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17092,7 +17074,6 @@ MonoBehaviour:
   pageManager: {fileID: 2044401773}
   timeManager: {fileID: 1945966703}
   image: {fileID: 1980803633}
-  text: {fileID: 0}
 --- !u!1 &2037021753
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,41 +8,36 @@ public class UIElementsSwitcher : MonoBehaviour
     public PageManager pageManager;
     public TimeManager timeManager;
     public Image image;
-    public Text text;
+    private GameObject[] children;
 
-
-    public void Start()
-    {
-        image = GetComponent<Image>();
-        if(image == null)
-            text = GetComponent<Text>();
-    }
 
     private void Update()
     {
-            if (gameObject.name == "Home Button") // ホームボタンの表示・非表示.
+        if (transform.tag == "Home Button") // ホームボタンの表示・非表示.
+        {
+            if (pageManager.currentPage <= 0)
+                image.enabled = false;
+            else
+                image.enabled = true;
+        }
+        else if (transform.tag == "Header")// ロゴとタイトルの表示・非表示.
+        {
+            if (pageManager.currentPage == 0)
             {
-                if (pageManager.currentPage <= 0)
-                    image.enabled = false;
-                else
-                    image.enabled = true;
+                image.enabled = true;
+                foreach (Transform child in transform)
+                {
+                    child.gameObject.SetActive(true);
+                }
             }
-            else // ロゴとタイトルの表示・非表示.
+            else
             {
-                if (pageManager.currentPage == 0)
+                image.enabled = false;
+                foreach (Transform child in transform)
                 {
-                    if (image != null)
-                        image.enabled = true;
-                    else
-                        text.enabled = true;
+                    child.gameObject.SetActive(false);
                 }
-                else
-                {
-                    if (image != null)
-                        image.enabled = false;
-                    else
-                        text.enabled = false;
-                }
+            }
         }
     }
 

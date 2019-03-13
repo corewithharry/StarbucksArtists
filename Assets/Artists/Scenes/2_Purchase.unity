@@ -2582,7 +2582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095d91f41c0d4477af19abb650e8564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideShow: {fileID: 0}
+  pageManager: {fileID: 0}
   messageShowingTime: 10
   inputWaitingTime: 60
 --- !u!4 &1386558968
@@ -2872,7 +2872,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 870629692}
-        m_MethodName: CheckMailAddress
+        m_MethodName: Bypass
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

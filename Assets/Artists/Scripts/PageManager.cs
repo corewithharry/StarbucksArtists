@@ -178,14 +178,10 @@ public class PageManager : MonoBehaviour
             return;
 
         if (rectTransform.anchoredPosition.y <= 0)
-        {
             rectTransform.anchoredPosition = Vector2.zero;
-        }
 
         if (rectTransform.anchoredPosition.y >= pageHeight)
-        {
             rectTransform.anchoredPosition = lowerLimit;
-        }
     }
 
     public void JumpToSpecificArtist(int pageID)
@@ -194,6 +190,7 @@ public class PageManager : MonoBehaviour
         moveAnimation = rectTransform
         .DOAnchorPosX(0f, 0f)
         .Play();
+        rectTransform.anchoredPosition = Vector2.zero;
         currentPage = 0;
 
         if (pageID == 0)
