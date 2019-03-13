@@ -6,13 +6,13 @@ using UniRx;
 
 public class PageManager : MonoBehaviour
 {
+    private SwipeGesture swipeGesture;
+    public Tween moveAnimation;
+
     private int numArtists = 20;
     private RectTransform rectTransform;
     public int pageWidth = 2048;
     public int currentPage = 1;
-
-    private SwipeGesture swipeGesture;
-    private Tween moveAnimation;
 
     public TimeManager timeManager;
     public bool autoScrollMode;
@@ -22,6 +22,10 @@ public class PageManager : MonoBehaviour
     private bool pageTurned;
     private bool isAscending;
     public bool isBusy;
+
+    public int pageHeight = 1536 * 2;
+    private Vector2 lowerLimit;
+    public float scrollAmount = 1000f;
 
 
     void Awake()
@@ -36,8 +40,10 @@ public class PageManager : MonoBehaviour
     {
         rectTransform = GetComponent<RectTransform>();
         swipeGesture = GetComponent<SwipeGesture>();
+        lowerLimit = new Vector2(0, pageHeight);
 
-        // next
+        // 各ページ間の水平スクロール.
+        // 左スワイプ（進む）.
         swipeGesture
             .OnSwipeLeft
             .Where(_ => currentPage < numArtists) // 最大ページ以前である場合のみ進める.
@@ -53,7 +59,7 @@ public class PageManager : MonoBehaviour
                 .Play();
             });
 
-        // back
+        // 右スワイプ（戻る）.
         swipeGesture
             .OnSwipeRight
             .Where(_ => currentPage > 1) // 1ページ目以降である場合のみ戻れる.
@@ -69,7 +75,7 @@ public class PageManager : MonoBehaviour
                 .Play();
             });
 
-        // last page
+        // 最終ページ.
         swipeGesture
             .OnSwipeLeft
             .Where(_ => currentPage >= numArtists) // これ以上は進めない.
@@ -84,7 +90,7 @@ public class PageManager : MonoBehaviour
                 .Play();
             });
 
-        // 1st page
+        // １ページ目.
         swipeGesture
             .OnSwipeRight
             .Where(_ => currentPage <= 1) // これ以上は戻れない.
@@ -98,6 +104,55 @@ public class PageManager : MonoBehaviour
                 .DOShakeAnchorPos(0.5f, Vector3.left * 200, 10)
                 .Play();
             });
+
+        // 一覧ページでの垂直スクロール.
+        // 上スワイプ（下降）.
+        swipeGesture
+            .OnSwipeUp
+            .Where(_ => rectTransform.anchoredPosition.y < pageHeight)
+            .Where(_ => currentPage == 0)
+            .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying())
+            .Subscribe(_ =>
+            {
+                moveAnimation = rectTransform
+                .DOAnchorPosY(rectTransform.anchoredPosition.y + scrollAmount, 1f)
+                .Play();
+            });
+        // 下スワイプ（上昇）.
+        swipeGesture
+            .OnSwipeDown
+            .Where(_ => rectTransform.anchoredPosition.y > 0)
+            .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying())
+            .Subscribe(_ =>
+            {
+                moveAnimation = rectTransform
+                .DOAnchorPosY(rectTransform.anchoredPosition.y - scrollAmount, 1f)
+                .Play();
+            });
+
+        // 下限.
+        swipeGesture
+            .OnSwipeUp
+            .Where(_ => rectTransform.anchoredPosition.y >= pageHeight)
+            .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying())
+            .Subscribe(_ =>
+            {
+                moveAnimation = rectTransform
+                .DOShakeAnchorPos(0.5f, Vector3.up * 200, 10)
+                .Play();
+            });
+
+        // 上限.
+        swipeGesture
+            .OnSwipeDown
+            .Where(_ => rectTransform.anchoredPosition.y <= 0)
+            .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying())
+            .Subscribe(_ =>
+            {
+                moveAnimation = rectTransform
+                .DOShakeAnchorPos(0.5f, Vector3.down * 200, 10)
+                .Play();
+            });
     }
 
     void Start()
@@ -109,7 +164,6 @@ public class PageManager : MonoBehaviour
     void Update()
     {
         elapsedTime += Time.deltaTime;
-
         if (autoScrollMode)
         {
             if ((elapsedTime >= transitionTime) && (!pageTurned))
@@ -119,6 +173,19 @@ public class PageManager : MonoBehaviour
         }
 
         isBusy = moveAnimation.IsPlaying();
+
+        if (currentPage > 0)
+            return;
+
+        if (rectTransform.anchoredPosition.y <= 0)
+        {
+            rectTransform.anchoredPosition = Vector2.zero;
+        }
+
+        if (rectTransform.anchoredPosition.y >= pageHeight)
+        {
+            rectTransform.anchoredPosition = lowerLimit;
+        }
     }
 
     public void JumpToSpecificArtist(int pageID)

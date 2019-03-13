@@ -4187,7 +4187,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -10767,8 +10767,6 @@ GameObject:
   - component: {fileID: 1225382867}
   - component: {fileID: 1225382865}
   - component: {fileID: 1225382866}
-  - component: {fileID: 1225382869}
-  - component: {fileID: 1225382868}
   m_Layer: 0
   m_Name: Index
   m_TagString: Untagged
@@ -10860,35 +10858,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1225382863}
   m_CullTransparentMesh: 0
---- !u!114 &1225382868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225382863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7ea70b3d64b74cb0bdd705136079cb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ThresholdSenconds: 1
-  ThresholdDistance: 10
---- !u!114 &1225382869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225382863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd84ea093aee74bc887884395c87cf0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pageHeight: 1572
-  timeManager: {fileID: 0}
-  isBusy: 0
 --- !u!1 &1236993354
 GameObject:
   m_ObjectHideFlags: 0
@@ -11187,6 +11156,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1249903883}
   - component: {fileID: 1249903884}
+  - component: {fileID: 1249903886}
+  - component: {fileID: 1249903885}
   m_Layer: 0
   m_Name: Column00
   m_TagString: Untagged
@@ -11248,6 +11219,43 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!114 &1249903885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249903882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1249903886
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249903882}
+  m_CullTransparentMesh: 0
 --- !u!1 &1250706534
 GameObject:
   m_ObjectHideFlags: 0
@@ -17275,6 +17283,8 @@ MonoBehaviour:
   transitionTime: 10
   autoScrollSpeed: 1
   isBusy: 0
+  pageHeight: 3072
+  scrollAmount: 1000
 --- !u!114 &2044401775
 MonoBehaviour:
   m_ObjectHideFlags: 0
