@@ -8,7 +8,7 @@ public class ImageLoader : MonoBehaviour
     private Rect sourceImageSize = new Rect(0, 0, 1920, 1200);
     private int numArtists;
     private int id;
-    public string[] urls;
+    public string[] imageURLs;
     private int numDone;
 
     public Text loadingText;
@@ -17,7 +17,7 @@ public class ImageLoader : MonoBehaviour
 
     private void Start()
     {
-        numArtists = Artworks.Instance.numArtists;
+        numArtists = Artworks.Instance.numArtworks;
 
         foreach (var item in FetchedImages.Instance.images)
         {
@@ -30,7 +30,7 @@ public class ImageLoader : MonoBehaviour
     {
         loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
 
-        if (numDone >= numArtists)
+        if (numDone >= numArtists * 2)
             sceneLoader.LoadMainScene();
     }
 
@@ -39,7 +39,7 @@ public class ImageLoader : MonoBehaviour
     /// </summary>
     IEnumerator GetTexture(int pageID)
     {
-        UnityWebRequest www = UnityWebRequestTexture.GetTexture(urls[id]);
+        UnityWebRequest www = UnityWebRequestTexture.GetTexture(imageURLs[id]);
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError)
@@ -58,5 +58,6 @@ public class ImageLoader : MonoBehaviour
 public class FetchedImages
 {
     public readonly static FetchedImages Instance = new FetchedImages();
-    public Sprite[] images = new Sprite[Artworks.Instance.numArtists];
+    public Sprite[] images = new Sprite[Artworks.Instance.numArtworks];
+    public Sprite[] thumbnails = new Sprite[Artworks.Instance.numArtworks];
 }

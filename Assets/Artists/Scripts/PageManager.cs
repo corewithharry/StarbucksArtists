@@ -33,7 +33,7 @@ public class PageManager : MonoBehaviour
         DOTween.Init();
         DOTween.defaultAutoPlay = AutoPlay.None; // Tween生成時に自動再生させない.
 
-        numArtists = Artworks.Instance.numArtists;
+        numArtists = Artworks.Instance.numArtworks;
     }
 
     void OnEnable()
@@ -114,6 +114,8 @@ public class PageManager : MonoBehaviour
             .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying())
             .Subscribe(_ =>
             {
+                autoScrollMode = false;
+                timeManager.timeSinceLastInput = 0;
                 moveAnimation = rectTransform
                 .DOAnchorPosY(rectTransform.anchoredPosition.y + scrollAmount, 1f)
                 .Play();
@@ -125,6 +127,8 @@ public class PageManager : MonoBehaviour
             .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying())
             .Subscribe(_ =>
             {
+                autoScrollMode = false;
+                timeManager.timeSinceLastInput = 0;
                 moveAnimation = rectTransform
                 .DOAnchorPosY(rectTransform.anchoredPosition.y - scrollAmount, 1f)
                 .Play();
@@ -137,6 +141,8 @@ public class PageManager : MonoBehaviour
             .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying())
             .Subscribe(_ =>
             {
+                autoScrollMode = false;
+                timeManager.timeSinceLastInput = 0;
                 moveAnimation = rectTransform
                 .DOShakeAnchorPos(0.5f, Vector3.up * 200, 10)
                 .Play();
@@ -149,6 +155,8 @@ public class PageManager : MonoBehaviour
             .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying())
             .Subscribe(_ =>
             {
+                autoScrollMode = false;
+                timeManager.timeSinceLastInput = 0;
                 moveAnimation = rectTransform
                 .DOShakeAnchorPos(0.5f, Vector3.down * 200, 10)
                 .Play();

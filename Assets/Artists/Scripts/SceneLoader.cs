@@ -79,8 +79,7 @@ public class Artworks
 {
     public readonly static Artworks Instance = new Artworks();
 
-    public int numArtists = 20;
+    public int numArtworks = 80;
     public int selectedWorkID = 1;
-    //public string name;
 }
 

@@ -14,6 +14,9 @@ public class ArtistsIndex : MonoBehaviour
     /// </summary>
     public void OnImageClick()
     {
+        if (pageManager.isBusy)
+            return;
+
         pageManager.autoScrollMode = false;
         timeManager.timeSinceLastInput = 0;
         pageManager.JumpToSpecificArtist(pageID);
