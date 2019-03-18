@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ImageLoader : MonoBehaviour
 {
-    private Rect sourceImageSize = new Rect(0, 0, 1920, 1200);
+    private Rect sourceImageSize = new Rect(0, 0, 1184, 1113);
     private Rect sourceThumbnailSize = new Rect(0, 0, 380, 380);
     private int numArtists;
     private int id;
