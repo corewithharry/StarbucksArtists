@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿//#define USE_LOADING_IMAGES
+
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
@@ -18,6 +20,7 @@ public class ImageLoader : MonoBehaviour
     public SceneLoader sceneLoader;
 
 
+#if USE_LOADING_IMAGES
     private void Start()
     {
         numArtists = Artworks.Instance.numArtworks;
@@ -79,9 +82,16 @@ public class ImageLoader : MonoBehaviour
         }
         doneLoadThumbs++;
     }
+#else
+    private void Update()
+    {
+        if (Input.GetMouseButton(0))
+            sceneLoader.LoadMainScene();
+    }
+#endif
 }
 
-public class FetchedImages
+    public class FetchedImages
 {
     public readonly static FetchedImages Instance = new FetchedImages();
     public Sprite[] images = new Sprite[Artworks.Instance.numArtworks];

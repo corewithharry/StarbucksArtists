@@ -745,167 +745,167 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageURLs:
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
   thumbnailURLs:
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
-  - https://github.com/KyotoBALArtists/KyotoBALArtists.github.io/blob/master/thumbnails/00.png?raw=true
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   loadingText: {fileID: 1107023427}
   sceneLoader: {fileID: 1332331245}
 --- !u!4 &1387376655
@@ -993,9 +993,9 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1536, y: 2048}
+  m_ReferenceResolution: {x: 2048, y: 1536}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
