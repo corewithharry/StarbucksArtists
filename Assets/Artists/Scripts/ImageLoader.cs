@@ -1,48 +1,142 @@
-﻿//#define USE_LOADING_IMAGES
-
+﻿#define USE_LOADING_IMAGES
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
+/// <summary>
+/// Imposes a limit on the maximum number of coroutines that can be running at any given time. Runs
+/// coroutines until the limit is reached and then begins queueing coroutines instead. When
+/// coroutines finish, queued coroutines are run.
+/// </summary>
+/// <author>Jackson Dunstan, http://JacksonDunstan.com/articles/3241</author>
+public class CoroutineQueue
+{
+    /// <summary>
+    /// Maximum number of coroutines to run at once
+    /// </summary>
+    private readonly uint maxActive;
+ 
+    /// <summary>
+    /// Delegate to start coroutines with
+    /// </summary>
+    private readonly Func<IEnumerator,Coroutine> coroutineStarter;
+ 
+    /// <summary>
+    /// Queue of coroutines waiting to start
+    /// </summary>
+    private readonly Queue<IEnumerator> queue;
+ 
+    /// <summary>
+    /// Number of currently active coroutines
+    /// </summary>
+    private uint numActive;
+
+    /// <summary>
+    /// Create the queue, initially with no coroutines
+    /// </summary>
+    /// <param name="maxActive">
+    /// Maximum number of coroutines to run at once. This must be at least one.
+    /// </param>
+    /// <param name="coroutineStarter">
+    /// Delegate to start coroutines with. Normally you'd pass
+    /// <see cref="MonoBehaviour.StartCoroutine"/> for this.
+    /// </param>
+    /// <exception cref="ArgumentException">
+    /// If maxActive is zero.
+    /// </exception>
+    public CoroutineQueue(uint maxActive, Func<IEnumerator,Coroutine> coroutineStarter)
+    {
+        if (maxActive == 0)
+        {
+            throw new ArgumentException("Must be at least one", "maxActive");
+        }
+        this.maxActive = maxActive;
+        this.coroutineStarter = coroutineStarter;
+        queue = new Queue<IEnumerator>();
+    }
+ 
+    /// <summary>
+    /// If the number of active coroutines is under the limit specified in the constructor, run the
+    /// given coroutine. Otherwise, queue it to be run when other coroutines finish.
+    /// </summary>
+    /// <param name="coroutine">Coroutine to run or queue</param>
+    public void Run(IEnumerator coroutine)
+    {
+        if (numActive < maxActive)
+        {
+            var runner = CoroutineRunner(coroutine);
+            coroutineStarter(runner);
+        }
+        else
+        {
+            queue.Enqueue(coroutine);
+        }
+    }
+ 
+    /// <summary>
+    /// Runs a coroutine then runs the next queued coroutine (via <see cref="Run"/>) if available.
+    /// Increments <see cref="numActive"/> before running the coroutine and decrements it after.
+    /// </summary>
+    /// <returns>Values yielded by the given coroutine</returns>
+    /// <param name="coroutine">Coroutine to run</param>
+    private IEnumerator CoroutineRunner(IEnumerator coroutine)
+    {
+        numActive++;
+        while (coroutine.MoveNext())
+        {
+            yield return coroutine.Current;
+        }
+        numActive--;
+        if (queue.Count > 0)
+        {
+            var next = queue.Dequeue();
+            Run(next);
+        }
+    }
+}
+
+
 public class ImageLoader : MonoBehaviour
 {
     private Rect sourceImageSize = new Rect(0, 0, 1184, 1113);
-    private Rect sourceThumbnailSize = new Rect(0, 0, 380, 380);
-    private int numArtists;
+    private int numArtworks;
     private int id;
     public string[] imageURLs;
-    public string[] thumbnailURLs;
-    private int doneLoadImg;
-    private int doneLoadThumbs;
+    private int numDoneImg;
 
     public Text loadingText;
     public SceneLoader sceneLoader;
 
 
 #if USE_LOADING_IMAGES
-    private void Start()
+    void Start()
     {
-        numArtists = Artworks.Instance.numArtworks;
+        numArtworks = Artworks.Instance.numArtworks;
+        // Create a coroutine queue that can run up to two coroutines at once
+        var queue = new CoroutineQueue(2, StartCoroutine);
 
         foreach (var item in FetchedImages.Instance.images)
         {
-            StartCoroutine("LoadImages", id);
+            queue.Run(LoadImages(id));
             id++;
         }
-        foreach (var item in FetchedImages.Instance.thumbnails)
+        /* Try to run five coroutines
+        for (var i = 0; i < 5; ++i)
         {
-            id = 0;
-            StartCoroutine("LoadThumbnails", id);
-            id++;
+            queue.Run(TestCoroutine(i, 3));
         }
+        */
     }
 
     private void Update()
     {
-        loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
+        loadingText.text = ("Loading..." + "\n" + numDoneImg + " / " + numArtworks);
+        //loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
 
-        if ((doneLoadImg >= numArtists) && (doneLoadThumbs >= numArtists))
+        if (numDoneImg >= numArtworks)
             sceneLoader.LoadMainScene();
     }
 
@@ -51,7 +145,7 @@ public class ImageLoader : MonoBehaviour
     /// </summary>
     IEnumerator LoadImages(int pageID)
     {
-        UnityWebRequest www = UnityWebRequestTexture.GetTexture(imageURLs[id]);
+        UnityWebRequest www = UnityWebRequestTexture.GetTexture(imageURLs[pageID]);
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError)
@@ -63,25 +157,22 @@ public class ImageLoader : MonoBehaviour
             Texture2D myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
             FetchedImages.Instance.images[pageID] = Sprite.Create(myTexture, sourceImageSize, Vector2.zero);
         }
-        doneLoadImg++;
+        numDoneImg++;
     }
 
-    IEnumerator LoadThumbnails(int pageID)
+    /* A coroutine that logs its lifecycle and yields a given number of times
+    IEnumerator TestCoroutine(int id, uint numYields)
     {
-        UnityWebRequest www = UnityWebRequestTexture.GetTexture(thumbnailURLs[id]);
-        yield return www.SendWebRequest();
-
-        if (www.isNetworkError || www.isHttpError)
+        Debug.Log("frame " + Time.frameCount + ": start " + id);
+        for (var i = 0u; i < numYields; ++i)
         {
-            Debug.Log(www.error);
+            Debug.Log("frame " + Time.frameCount + ": yield " + id);
+            yield return null;
         }
-        else
-        {
-            Texture2D myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
-            FetchedImages.Instance.thumbnails[pageID] = Sprite.Create(myTexture, sourceThumbnailSize, Vector2.zero);
-        }
-        doneLoadThumbs++;
+        Debug.Log("frame " + Time.frameCount + ": end " + id);
     }
+    */
+
 #else
     private void Update()
     {
@@ -91,7 +182,8 @@ public class ImageLoader : MonoBehaviour
 #endif
 }
 
-    public class FetchedImages
+
+public class FetchedImages
 {
     public readonly static FetchedImages Instance = new FetchedImages();
     public Sprite[] images = new Sprite[Artworks.Instance.numArtworks];

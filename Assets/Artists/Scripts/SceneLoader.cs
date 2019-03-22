@@ -79,7 +79,7 @@ public class Artworks
 {
     public readonly static Artworks Instance = new Artworks();
 
-    public int numArtworks = 80;
+    public int numArtworks = 20;
     public int selectedWorkID = 1;
 }
 
