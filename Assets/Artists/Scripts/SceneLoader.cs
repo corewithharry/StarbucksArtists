@@ -81,6 +81,7 @@ public class Artworks
     // ここで設定するのは作品数の上限（ex.最大数が100なら，展示作品数が80であっても000.jpg - 100.jpgを取りに行く）にして，
     // 実際に表示するページ数はPageManagerに管理させるべき. その場合，展示作品数をどのように取得するか？
     public int numArtworks = 20;
+    public int numOnDisplay;
     public int selectedWorkID = 1;
 }
 

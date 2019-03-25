@@ -101,7 +101,7 @@ public class CoroutineQueue
 
 public class ImageLoader : MonoBehaviour
 {
-    private Rect sourceImageSize = new Rect(0, 0, 1200, 1128);
+    private Rect sourceImageSize = new Rect(0, 0, 1920, 1200);
     private Rect sourceThumbnailSize = new Rect(0, 0, 380, 380);
     private int numArtworks;
     public string[] imageURLs;

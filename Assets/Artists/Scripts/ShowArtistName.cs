@@ -4,6 +4,7 @@ using System.Text;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShowArtistName : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ShowArtistName : MonoBehaviour
     public List<string[]> csvData = new List<string[]>();
     private StringBuilder selectedArtwork = new StringBuilder();
     public Text artistName;
+    private int numOnDisplay;
 
 
     void Awake()
@@ -22,7 +24,10 @@ public class ShowArtistName : MonoBehaviour
         {
             string line = reader.ReadLine();
             csvData.Add(line.Split(','));
+            numOnDisplay++;
         }
+
+        Artworks.Instance.numOnDisplay = numOnDisplay - 1; // 展示中の作品数.
     }
 
     /// <summary>
@@ -30,6 +35,10 @@ public class ShowArtistName : MonoBehaviour
     /// </summary>
     void Start()
     {
+        var scene = SceneManager.GetActiveScene();
+        if (scene.name != "2_Purchase")
+            return;
+
         selectedArtwork.Clear();
         var id = Artworks.Instance.selectedWorkID;
         selectedArtwork.Append(id + ")　"); // 作品番号.

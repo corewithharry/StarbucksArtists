@@ -11,7 +11,7 @@ public class ImageSetter : MonoBehaviour
 
     void Start()
     {
-        var numArtists = Artworks.Instance.numArtworks;
+        var numArtists = Artworks.Instance.numOnDisplay;
         for (int i = 0; i < numArtists; i++)
         {
             images[i].sprite = FetchedImages.Instance.images[i];

@@ -32,7 +32,7 @@ public class PageManager : MonoBehaviour
         DOTween.Init();
         DOTween.defaultAutoPlay = AutoPlay.None; // Tween生成時に自動再生させない.
 
-        numArtists = Artworks.Instance.numArtworks;
+        numArtists = Artworks.Instance.numOnDisplay;
     }
 
     void OnEnable()
