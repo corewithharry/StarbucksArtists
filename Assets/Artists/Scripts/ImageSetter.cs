@@ -15,6 +15,7 @@ public class ImageSetter : MonoBehaviour
         for (int i = 0; i < numArtists; i++)
         {
             images[i].sprite = FetchedImages.Instance.images[i];
+            thumbnails[i].sprite = FetchedImages.Instance.thumbnails[i];
             /*
             if (images[i].sprite == null) // 画像が取得できなかった場合，ローカルのものと差し替える.
             {

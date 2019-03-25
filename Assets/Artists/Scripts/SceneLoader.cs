@@ -78,7 +78,8 @@ public class SceneLoader : MonoBehaviour
 public class Artworks
 {
     public readonly static Artworks Instance = new Artworks();
-
+    // ここで設定するのは作品数の上限（ex.最大数が100なら，展示作品数が80であっても000.jpg - 100.jpgを取りに行く）.
+    // 実際に表示するページ数はPageManagerが変更する.
     public int numArtworks = 20;
     public int selectedWorkID = 1;
 }

@@ -101,11 +101,12 @@ public class CoroutineQueue
 
 public class ImageLoader : MonoBehaviour
 {
-    private Rect sourceImageSize = new Rect(0, 0, 1184, 1113);
+    private Rect sourceImageSize = new Rect(0, 0, 1200, 1128);
+    private Rect sourceThumbnailSize = new Rect(0, 0, 380, 380);
     private int numArtworks;
-    private int id;
     public string[] imageURLs;
-    private int numDoneImg;
+    public string[] thumbnailURLs = new string[Artworks.Instance.numArtworks];
+    private int numDone;
 
     public Text loadingText;
     public SceneLoader sceneLoader;
@@ -118,60 +119,45 @@ public class ImageLoader : MonoBehaviour
         // Create a coroutine queue that can run up to two coroutines at once
         var queue = new CoroutineQueue(2, StartCoroutine);
 
-        foreach (var item in FetchedImages.Instance.images)
+        for(int i = 0; i < numArtworks; i++)
         {
-            queue.Run(LoadImages(id));
-            id++;
+            queue.Run(LoadImages(i));
         }
-        /* Try to run five coroutines
-        for (var i = 0; i < 5; ++i)
-        {
-            queue.Run(TestCoroutine(i, 3));
-        }
-        */
     }
 
     private void Update()
     {
-        loadingText.text = ("Loading..." + "\n" + numDoneImg + " / " + numArtworks);
+        loadingText.text = ("Loading..." + "\n" + numDone + " / " + numArtworks);
         //loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
 
-        if (numDoneImg >= numArtworks)
+        if (numDone >= numArtworks)
             sceneLoader.LoadMainScene();
     }
 
     /// <summary>
-    /// 各ページの画像をロードする.
+    /// 各ページの画像とサムネイルをロードする.
     /// </summary>
     IEnumerator LoadImages(int pageID)
     {
         UnityWebRequest www = UnityWebRequestTexture.GetTexture(imageURLs[pageID]);
         yield return www.SendWebRequest();
+        UnityWebRequest www1 = UnityWebRequestTexture.GetTexture(thumbnailURLs[pageID]);
+        yield return www1.SendWebRequest();
 
-        if (www.isNetworkError || www.isHttpError)
+        if (www.isNetworkError || www.isHttpError || www1.isNetworkError || www1.isHttpError)
         {
             Debug.Log(www.error);
         }
         else
         {
-            Texture2D myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
-            FetchedImages.Instance.images[pageID] = Sprite.Create(myTexture, sourceImageSize, Vector2.zero);
-        }
-        numDoneImg++;
-    }
+            Texture2D imgTex = ((DownloadHandlerTexture)www.downloadHandler).texture;
+            FetchedImages.Instance.images[pageID] = Sprite.Create(imgTex, sourceImageSize, Vector2.zero);
 
-    /* A coroutine that logs its lifecycle and yields a given number of times
-    IEnumerator TestCoroutine(int id, uint numYields)
-    {
-        Debug.Log("frame " + Time.frameCount + ": start " + id);
-        for (var i = 0u; i < numYields; ++i)
-        {
-            Debug.Log("frame " + Time.frameCount + ": yield " + id);
-            yield return null;
+            Texture2D thumbTex = ((DownloadHandlerTexture)www1.downloadHandler).texture;
+            FetchedImages.Instance.thumbnails[pageID] = Sprite.Create(thumbTex, sourceThumbnailSize, Vector2.zero);
         }
-        Debug.Log("frame " + Time.frameCount + ": end " + id);
+        numDone++;
     }
-    */
 
 #else
     private void Update()
