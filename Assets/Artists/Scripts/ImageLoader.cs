@@ -106,9 +106,11 @@ public class ImageLoader : MonoBehaviour
     private int numArtworks;
     public string[] imageURLs;
     public string[] thumbnailURLs = new string[Artworks.Instance.numArtworks];
-    private int numDone;
+    private int numLoadedImgs;
+    private int numLoadedThumbs;
 
     public Text loadingText;
+    public Slider slider;
     public SceneLoader sceneLoader;
 
 
@@ -122,41 +124,56 @@ public class ImageLoader : MonoBehaviour
         for(int i = 0; i < numArtworks; i++)
         {
             queue.Run(LoadImages(i));
+            queue.Run(LoadThumbnails(i));
         }
     }
 
     private void Update()
     {
-        loadingText.text = ("Loading..." + "\n" + numDone + " / " + numArtworks);
-        //loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
+        loadingText.text = ("Loading images ...");
+        loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
+        var progressVal = (float)numLoadedImgs / numArtworks;
+        slider.value = progressVal;
 
-        if (numDone >= numArtworks)
+        if ((numLoadedImgs >= numArtworks) && (numLoadedThumbs >= numArtworks))
             sceneLoader.LoadMainScene();
     }
 
     /// <summary>
     /// 各ページの画像とサムネイルをロードする.
     /// </summary>
-    IEnumerator LoadImages(int pageID)
+    private IEnumerator LoadImages(int pageID)
     {
         UnityWebRequest www = UnityWebRequestTexture.GetTexture(imageURLs[pageID]);
         yield return www.SendWebRequest();
-        UnityWebRequest www1 = UnityWebRequestTexture.GetTexture(thumbnailURLs[pageID]);
-        yield return www1.SendWebRequest();
 
-        if (www.isNetworkError || www.isHttpError || www1.isNetworkError || www1.isHttpError)
+        if (www.isNetworkError || www.isHttpError)
         {
-            Debug.Log(www.error);
+            loadingText.text = www.error;
         }
         else
         {
             Texture2D imgTex = ((DownloadHandlerTexture)www.downloadHandler).texture;
             FetchedImages.Instance.images[pageID] = Sprite.Create(imgTex, sourceImageSize, Vector2.zero);
+        }
+        numLoadedImgs++;
+    }
 
-            Texture2D thumbTex = ((DownloadHandlerTexture)www1.downloadHandler).texture;
+    private IEnumerator LoadThumbnails(int pageID)
+    {
+        UnityWebRequest www = UnityWebRequestTexture.GetTexture(thumbnailURLs[pageID]);
+        yield return www.SendWebRequest();
+
+        if (www.isNetworkError || www.isHttpError)
+        {
+            loadingText.text = www.error;
+        }
+        else
+        {
+            Texture2D thumbTex = ((DownloadHandlerTexture)www.downloadHandler).texture;
             FetchedImages.Instance.thumbnails[pageID] = Sprite.Create(thumbTex, sourceThumbnailSize, Vector2.zero);
         }
-        numDone++;
+        numLoadedThumbs++;
     }
 
 #else
