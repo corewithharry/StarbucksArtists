@@ -9,7 +9,7 @@ public class PageManager : MonoBehaviour
     private SwipeGesture swipeGesture;
     public Tween moveAnimation;
 
-    private int numArtists = 20;
+    private int numArtists;
     private RectTransform rectTransform;
     public int pageWidth = 2048;
     public int currentPage = 1;
@@ -22,10 +22,9 @@ public class PageManager : MonoBehaviour
     private bool pageTurned;
     private bool isAscending;
     public bool isBusy;
-
-    public int pageHeight = 1536 * 2;
-    private Vector2 lowerLimit;
-    public float scrollAmount = 1000f;
+    // 一覧ページの下限. アンカーポイントが左上なので，ページの縦の長さがheight(1536) * nの場合，height * (n-1)を指定すること.
+    public Vector2 lowerLimit = new Vector2(0, 1536 * 3);
+    public float scrollAmount = 1500f;
 
 
     void Awake()
@@ -40,7 +39,6 @@ public class PageManager : MonoBehaviour
     {
         rectTransform = GetComponent<RectTransform>();
         swipeGesture = GetComponent<SwipeGesture>();
-        lowerLimit = new Vector2(0, pageHeight);
 
         // 各ページ間の水平スクロール.
         // 左スワイプ（進む）.
@@ -109,7 +107,7 @@ public class PageManager : MonoBehaviour
         // 上スワイプ（下降）.
         swipeGesture
             .OnSwipeUp
-            .Where(_ => rectTransform.anchoredPosition.y < pageHeight)
+            .Where(_ => rectTransform.anchoredPosition.y < lowerLimit.y)
             .Where(_ => currentPage == 0)
             .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying())
             .Subscribe(_ =>
@@ -117,7 +115,7 @@ public class PageManager : MonoBehaviour
                 autoScrollMode = false;
                 timeManager.timeSinceLastInput = 0;
                 moveAnimation = rectTransform
-                .DOAnchorPosY(rectTransform.anchoredPosition.y + scrollAmount, 1f)
+                .DOAnchorPosY(rectTransform.anchoredPosition.y + scrollAmount, 0.8f)
                 .Play();
             });
         // 下スワイプ（上昇）.
@@ -130,14 +128,14 @@ public class PageManager : MonoBehaviour
                 autoScrollMode = false;
                 timeManager.timeSinceLastInput = 0;
                 moveAnimation = rectTransform
-                .DOAnchorPosY(rectTransform.anchoredPosition.y - scrollAmount, 1f)
+                .DOAnchorPosY(rectTransform.anchoredPosition.y - scrollAmount, 0.8f)
                 .Play();
             });
 
         // 下限.
         swipeGesture
             .OnSwipeUp
-            .Where(_ => rectTransform.anchoredPosition.y >= pageHeight)
+            .Where(_ => rectTransform.anchoredPosition.y >= lowerLimit.y)
             .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying())
             .Subscribe(_ =>
             {
@@ -188,7 +186,7 @@ public class PageManager : MonoBehaviour
         if (rectTransform.anchoredPosition.y <= 0)
             rectTransform.anchoredPosition = Vector2.zero;
 
-        if (rectTransform.anchoredPosition.y >= pageHeight)
+        if (rectTransform.anchoredPosition.y >= lowerLimit.y)
             rectTransform.anchoredPosition = lowerLimit;
     }
 
