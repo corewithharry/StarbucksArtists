@@ -806,7 +806,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3da7fc9a4f641e4a8e4846091ab3a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  artistName: {fileID: 1163456280}
+  csvURL: https://raw.githubusercontent.com/h-nishihata/BAL_Images/gh-pages/artworkInfo.csv
+  artistName: {fileID: 415201654}
 --- !u!1 &463066101
 GameObject:
   m_ObjectHideFlags: 0

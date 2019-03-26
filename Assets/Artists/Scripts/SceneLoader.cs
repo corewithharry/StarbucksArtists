@@ -83,5 +83,6 @@ public class Artworks
     public int numOnDisplay;
     // 選択中の作品ID.
     public int selectedWorkID = 1;
+    public List<string[]> csvData;
 }
 

@@ -699,7 +699,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 51
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -974,6 +974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3da7fc9a4f641e4a8e4846091ab3a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  csvURL: https://raw.githubusercontent.com/h-nishihata/BAL_Images/gh-pages/artworkInfo.csv
   artistName: {fileID: 0}
 --- !u!4 &1387376655
 Transform:
@@ -1002,86 +1003,86 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageURLs:
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
-  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/template.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
+  - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Images/00.jpg?raw=true
   thumbnailURLs:
   - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Thumbnails/00.jpg?raw=true
   - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Thumbnails/00.jpg?raw=true
