@@ -105,7 +105,7 @@ public class ImageLoader : MonoBehaviour
     private Rect sourceThumbnailSize = new Rect(0, 0, 380, 380);
     private int numArtworks;
     public string[] imageURLs;
-    public string[] thumbnailURLs = new string[Artworks.Instance.numArtworks];
+    public string[] thumbnailURLs;
     private int numLoadedImgs;
     private int numLoadedThumbs;
 
@@ -117,7 +117,7 @@ public class ImageLoader : MonoBehaviour
 #if USE_LOADING_IMAGES
     void Start()
     {
-        numArtworks = Artworks.Instance.numArtworks;
+        numArtworks = Artworks.Instance.numMaxArtworks;
         // Create a coroutine queue that can run up to two coroutines at once
         var queue = new CoroutineQueue(2, StartCoroutine);
 
@@ -189,6 +189,6 @@ public class ImageLoader : MonoBehaviour
 public class FetchedImages
 {
     public readonly static FetchedImages Instance = new FetchedImages();
-    public Sprite[] images = new Sprite[Artworks.Instance.numArtworks];
-    public Sprite[] thumbnails = new Sprite[Artworks.Instance.numArtworks];
+    public Sprite[] images = new Sprite[Artworks.Instance.numMaxArtworks];
+    public Sprite[] thumbnails = new Sprite[Artworks.Instance.numMaxArtworks];
 }

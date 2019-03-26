@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ShowArtistName : MonoBehaviour
+public class GetCSVData : MonoBehaviour
 {
     private TextAsset csvFile;
     public List<string[]> csvData = new List<string[]>();

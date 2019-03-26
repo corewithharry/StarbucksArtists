@@ -803,10 +803,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 415201652}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d7c95fd2ee834e5485a598e887d106b, type: 3}
+  m_Script: {fileID: 11500000, guid: af3da7fc9a4f641e4a8e4846091ab3a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  artistName: {fileID: 415201654}
+  artistName: {fileID: 1163456280}
 --- !u!1 &463066101
 GameObject:
   m_ObjectHideFlags: 0

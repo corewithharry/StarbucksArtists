@@ -9,7 +9,7 @@ public class PageManager : MonoBehaviour
     private SwipeGesture swipeGesture;
     public Tween moveAnimation;
 
-    private int numArtists;
+    private int numArtworks;
     private RectTransform rectTransform;
     public int pageWidth = 2048;
     public int currentPage = 1;
@@ -32,7 +32,7 @@ public class PageManager : MonoBehaviour
         DOTween.Init();
         DOTween.defaultAutoPlay = AutoPlay.None; // Tween生成時に自動再生させない.
 
-        numArtists = Artworks.Instance.numOnDisplay;
+        numArtworks = Artworks.Instance.numOnDisplay;
     }
 
     void OnEnable()
@@ -44,7 +44,7 @@ public class PageManager : MonoBehaviour
         // 左スワイプ（進む）.
         swipeGesture
             .OnSwipeLeft
-            .Where(_ => currentPage < numArtists) // 最大ページ以前である場合のみ進める.
+            .Where(_ => currentPage < numArtworks) // 最大ページ以前である場合のみ進める.
             .Where(_ => currentPage != 0) // 選択画面ではスワイプさせない.
             .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying()) // アニメーション実行中ではない.
             .Subscribe(_ =>
@@ -76,7 +76,7 @@ public class PageManager : MonoBehaviour
         // 最終ページ.
         swipeGesture
             .OnSwipeLeft
-            .Where(_ => currentPage >= numArtists) // これ以上は進めない.
+            .Where(_ => currentPage >= numArtworks) // これ以上は進めない.
             .Where(_ => currentPage != 0)
             .Where(_ => moveAnimation == null || !moveAnimation.IsPlaying())
             .Subscribe(_ =>
@@ -213,14 +213,14 @@ public class PageManager : MonoBehaviour
         pageTurned = true;
         if (isAscending)
         {
-            if (currentPage < numArtists)
+            if (currentPage < numArtworks)
             {
                 currentPage++;
                 moveAnimation = rectTransform
                 .DOAnchorPosX(rectTransform.anchoredPosition.x - pageWidth, autoScrollSpeed)
                 .Play();
             }
-            else if (currentPage >= numArtists)
+            else if (currentPage >= numArtworks)
             {
                 currentPage--;
                 isAscending = false;

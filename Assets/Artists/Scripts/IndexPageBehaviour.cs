@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class ArtistsIndex : MonoBehaviour
+public class IndexPageBehaviour : MonoBehaviour
 {
     public int pageID;
     public PageManager pageManager;

@@ -38,7 +38,6 @@ public class SceneLoader : MonoBehaviour
         if (elapsedTime > timeLimit)
         {
             Artworks.Instance.selectedWorkID = 0;
-            //SelectedArtwork.Instance.name = "";
             LoadMainScene();
         }
     }
@@ -49,15 +48,13 @@ public class SceneLoader : MonoBehaviour
         {
             case "1_Main": // 閲覧画面から購入画面へ移動.
                 Artworks.Instance.selectedWorkID = pageManager.currentPage;
-                //SelectedArtwork.Instance.name = artistName.text;
                 SceneManager.LoadScene("2_Purchase");
                 break;
             case "2_Purchase": // 購入画面から閲覧画面へ戻る.
                 LoadMainScene();
                 break;
-            case "3_Sent": // 送信完了画面から閲覧画面へ戻る.
+            case "3_Sent": // 送信完了画面からアーティスト一覧画面へ戻る.
                 Artworks.Instance.selectedWorkID = 0;
-                //SelectedArtwork.Instance.name = "";
                 LoadMainScene();
                 break;
         }
@@ -74,14 +71,17 @@ public class SceneLoader : MonoBehaviour
     }
 }
 
-
+/// <summary>
+/// 作品画像番号を管理するクラス.
+/// </summary>
 public class Artworks
 {
-    public readonly static Artworks Instance = new Artworks();
-    // ここで設定するのは作品数の上限（ex.最大数が100なら，展示作品数が80であっても000.jpg - 100.jpgを取りに行く）にして，
-    // 実際に表示するページ数はPageManagerに管理させるべき. その場合，展示作品数をどのように取得するか？
-    public int numArtworks = 20;
+    public static readonly Artworks Instance = new Artworks();
+    // アプリが扱う作品数の上限. 100なら，展示作品数が80であっても起動時に最新の000.jpg - 100.jpgを取りに行く.
+    public int numMaxArtworks = 80;
+    // CSVファイルを読み込んで設定される展示作品数. この値にもとづいて画像とページの数を決めている.
     public int numOnDisplay;
+    // 選択中の作品ID.
     public int selectedWorkID = 1;
 }
 
