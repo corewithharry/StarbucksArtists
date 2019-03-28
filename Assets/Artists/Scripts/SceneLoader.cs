@@ -77,8 +77,10 @@ public class SceneLoader : MonoBehaviour
 public class Artworks
 {
     public static readonly Artworks Instance = new Artworks();
-    // アプリが扱う作品数の上限. 100なら，展示作品数が80であっても起動時に最新の000.jpg - 100.jpgを取りに行く.
-    public int numMaxArtworks = 80;
+    // アプリが扱う作品数の上限. 40なら，展示作品数が80であっても起動時に最新の00.jpg - 40.jpgを取りに行く.
+    // 40以上になるとどう頑張ってもエラーになるので，小さい作品は１ページに纏めるなど，運用面でカバーしてもらう（190328現在）.
+    // 更新された画像のみをCSVで管理し取得する方法も考えたが，全ページを一斉更新したり，立て続けに更新されたりすると反映が追いつかないので断念. orz
+    public int numMaxArtworks = 40;
     // CSVファイルを読み込んで設定される展示作品数. この値にもとづいて画像とページの数を決めている.
     public int numOnDisplay;
     // 選択中の作品ID.

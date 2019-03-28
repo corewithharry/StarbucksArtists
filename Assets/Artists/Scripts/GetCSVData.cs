@@ -64,7 +64,6 @@ public class GetCSVData : MonoBehaviour
             }
             Artworks.Instance.csvData = csvData;
             Artworks.Instance.numOnDisplay = numOnDisplay - 1; // 展示中の作品数.
-            //Debug.Log(csvData[1][1]);
         }
     }
 }

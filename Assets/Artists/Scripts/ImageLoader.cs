@@ -1,10 +1,12 @@
 ﻿#define USE_LOADING_IMAGES
 using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+
 
 /// <summary>
 /// Imposes a limit on the maximum number of coroutines that can be running at any given time. Runs
@@ -110,6 +112,7 @@ public class ImageLoader : MonoBehaviour
     private int numLoadedThumbs;
 
     public Text loadingText;
+    public Text errorMessage;
     public Slider slider;
     public SceneLoader sceneLoader;
 
@@ -149,7 +152,7 @@ public class ImageLoader : MonoBehaviour
 
         if (www.isNetworkError || www.isHttpError)
         {
-            loadingText.text = www.error;
+            errorMessage.text = "Error: " + www.error;
         }
         else
         {
@@ -166,7 +169,7 @@ public class ImageLoader : MonoBehaviour
 
         if (www.isNetworkError || www.isHttpError)
         {
-            loadingText.text = www.error;
+            errorMessage.text = "Error: " + www.error;
         }
         else
         {

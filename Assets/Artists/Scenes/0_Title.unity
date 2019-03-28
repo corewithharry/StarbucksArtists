@@ -1165,6 +1165,7 @@ MonoBehaviour:
   - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Thumbnails/00.jpg?raw=true
   - https://github.com/h-nishihata/BAL_Images/blob/gh-pages/Thumbnails/00.jpg?raw=true
   loadingText: {fileID: 1107023427}
+  errorMessage: {fileID: 5288782}
   slider: {fileID: 1798619685}
   sceneLoader: {fileID: 1332331245}
 --- !u!1 &1637333539
