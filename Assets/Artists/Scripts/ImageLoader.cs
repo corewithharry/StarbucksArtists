@@ -1,12 +1,10 @@
 ﻿#define USE_LOADING_IMAGES
 using System;
-using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
-
 
 /// <summary>
 /// Imposes a limit on the maximum number of coroutines that can be running at any given time. Runs
